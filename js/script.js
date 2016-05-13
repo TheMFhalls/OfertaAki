@@ -4,7 +4,7 @@
 		$.ajax({
 			type     : "GET",
 			dataType : "json",
-			url      : "/ofertaaki/ajax/getCidade.php",
+			url      : "/ofertaaki/OfertaAki/ajax/getCidade.php",
 			data     : { q : cidade},
 			async    : true,
 			success  : function (resp){
