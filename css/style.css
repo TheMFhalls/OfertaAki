@@ -1,0 +1,43 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+.container{
+	width: 970px !important;
+	margin: auto;	
+}
+
+.padding0px{
+	padding: 0px !important;
+}
+
+.margin0px{
+	margin: 0px !important;
+}
+
+.logoImagemImg{
+	max-width: 150px;
+}
+
+ul.menuPrincipal {}
+
+ul.menuPrincipal li {
+    display: inline-table;
+    padding-right: 20px;
+}
+
+.carinho{
+	background-color: red;
+}
+
+li.liListaCidade{
+	background-color: red;
+	display: -webkit-box;
+}
+
+li.liListaCidade:hover{
+	background-color: yellow;
+	font-weight: bolder;
+	cursor: pointer;
+}
