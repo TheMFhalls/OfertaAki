@@ -2,7 +2,7 @@
 <html>
 <?php
 	//INCLUDE OF HEAD
-	include_once 'includes/head.php';
+	include_once 'http://'.$_SERVER['SERVER_NAME'].'/includes/head.php';
 ?>
 <body>
 	<div class="container bodyGeral bodyGeral-home">	
@@ -11,7 +11,7 @@
 				<label for="cidade" class="cidateLabel col-sm-6 text-center">
 					Informe sua Cidade: 
 				</label>
-				<input class="cidadeClass col-sm-6 padding0px" autocomplete="false" id="cidadeId" type="text" 
+				<input class="cidadeClass col-sm-6 padding0px" autocomplete="off" id="cidadeId" type="text" 
 				name="cidade" onkeyup="javascript:getCidade();" onblur="javascript:setReturnCidade();" />
 				<div class="returnCidade padding0px col-sm-offset-6 col-sm-6" id="returnCidade">					
 				</div>
@@ -24,7 +24,7 @@
 		<div class="rodape rodape-home">
 			<div class="row">
 				<?php 
-					include_once 'includes/rodape.php';
+					include_once 'http://'.$_SERVER['SERVER_NAME'].'/includes/rodape.php';
 				?>
 			</div>
 		</div>
