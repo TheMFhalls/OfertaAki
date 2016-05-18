@@ -5,7 +5,7 @@
 		$.ajax({
 			type     : "GET",
 			dataType : "json",
-			url      : raiz+"/ajax/getCidade.php",
+			url      : raiz+"/OfertaAki/ajax/getCidade.php",
 			data     : { q : cidade},
 			async    : true,
 			success  : function (resp){
@@ -23,6 +23,6 @@
 		setTimeout('$("#returnCidade").empty();', 3000);
 	}
 	function setCidade(id_cid){
-		window.location = '/config/connection/loginUsuario.php?id_cid='+id_cid;
+		window.location = '/OfertaAki/config/connection/loginUsuario.php?id_cid='+id_cid;
 	}
 	
