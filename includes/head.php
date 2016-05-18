@@ -1,6 +1,3 @@
-<?php
-	include_once 'http://'.$_SERVER['SERVER_NAME'].'/config/config.php';
-?>
 <head>
 	<title>OfertaAki.com - As melhores ofertas da sua região!</title>
 	<meta charset="utf-8">

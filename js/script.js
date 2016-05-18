@@ -1,10 +1,11 @@
 //FUNÇÃO DE BUSCA DA CIDADE
 	function getCidade(){
 		var cidade = $('#cidadeId').val();
+		var raiz = location.origin;
 		$.ajax({
 			type     : "GET",
 			dataType : "json",
-			url      : "/OfertaAki/ajax/getCidade.php",
+			url      : raiz+"/ajax/getCidade.php",
 			data     : { q : cidade},
 			async    : true,
 			success  : function (resp){
@@ -22,6 +23,6 @@
 		setTimeout('$("#returnCidade").empty();', 3000);
 	}
 	function setCidade(id_cid){
-		window.location = '/ajax/loginUsuario.class.php?id_cid='+id_cid;
+		window.location = '/config/connection/loginUsuario.php?id_cid='+id_cid;
 	}
 	

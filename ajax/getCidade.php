@@ -1,5 +1,6 @@
 <?php
-	include_once 'http://'.$_SERVER['SERVER_NAME'].'/config/config.php';
+
+	include_once '../config/config.php';
 
 	extract($_GET);
 
