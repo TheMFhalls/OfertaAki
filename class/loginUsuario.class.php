@@ -6,7 +6,7 @@ class loginUsuario{
 	private $ip_usu;
 
 	function __construct($id_cidade){
-		session_start();
+		@session_start();
 		$this->id_cid_usu = $id_cidade;
 		$this->ip_usu = $_SERVER["REMOTE_ADDR"];
 	}
@@ -24,12 +24,10 @@ class loginUsuario{
 	}
 
 	public function gerar(){
-		session_start();
 		$_SESSION['usuario']['id_cid_usu']
 			= $this->id_cid_usu;
-		$_SESSION['usuario']['id_cid_usu']
+		$_SESSION['usuario']['ip_usu']
 			= $this->ip_usu;
-		return true;
 	}
 
 }

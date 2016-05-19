@@ -1,4 +1,4 @@
 <?php
 	//CONNECTION IN DATA_BASE
-        $connection = new PDO('mysql:host=astelnorte.com.br;dbname=astel196_OfertaAki', 'astel196', 'kjkszpj130696');
+        $connection = new PDO('mysql:host=mysql.hostinger.com.br;dbname=u547235188_oa', 'u547235188_oa', 'kjkszpsadfj130696');
 ?>
