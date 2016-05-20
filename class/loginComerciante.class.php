@@ -1,8 +1,10 @@
 <?php
 
-include_once '../config/config.php';
+include_once './config/config.php';
 
-class loginComerciante{
+class loginComerciante extends config {
+
+	private $connection;
 
 	private $cnpj_com;
 	private $senha_com;
@@ -17,37 +19,29 @@ class loginComerciante{
 	private $bairro_com;
 	private $endereco_com;
 
-	function __construct($cnpj_com, $senha_com){
+	function __construct($email_com, $senha_com){
 		@session_start();
-		$this->cnpj_com = $cnpj_com;
+		$this->email_com = $email_com;
 		$this->senha_com = $senha_com;
+		$this->setConnection();
 	}
 
 	private function busca_com(){
 		$query = "
-			SELECT *
-			FROM comerciante LEFT JOIN telefone_com
-			ON cnpj_com = cnpj_com_tel
+			SELECT * FROM
+			comerciante WHERE
+			email_com = '".$this->email_com."' AND
+			senha_com = '".$this->senha_com."'
 		";
-	}
-
-	public function setIdCidUsu($id_cid_usu){
-		$this->id_cid_usu = $id_cid_usu;
-	}
-
-	public function getIdCidUsu(){
-		return $this->id_cid_usu;
-	}
-
-	public function getIpUsu(){
-		return $this->ip_usu;
+		$this->connection->query($query);
 	}
 
 	public function gerar(){
-		$_SESSION['usuario']['id_cid_usu']
-			= $this->id_cid_usu;
-		$_SESSION['usuario']['ip_usu']
-			= $this->ip_usu;
+		$this->busca_com();
+	}
+
+	public function setConnection(){
+		$this->connection = new config();
 	}
 
 }
