@@ -2,6 +2,7 @@
 <html>
 <?php
 	//INCLUDE OF HEAD
+	include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/security/protect.php';
 	include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/head.php';
 ?>
 <body>

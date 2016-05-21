@@ -16,6 +16,9 @@
 				<div class="returnCidade padding0px col-sm-offset-6 col-sm-6" id="returnCidade">					
 				</div>
 			</div>
+			<?php
+				@print_r($_SESSION);
+			?>
 		</div>
 	</div>
 </body>
