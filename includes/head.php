@@ -7,5 +7,5 @@
 	<script type="text/javascript" src="js/script.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
-	<link rel="icon" type="image/jpg" href="img/favIcon.ico" /-->
+	<link rel="icon" type="image/jpg" href="img/carrinho.png.ico" /-->
 </head>
