@@ -1,6 +1,10 @@
 <?php
     @session_start();
     session_destroy();
-    $sair = 'location:'.$_SERVER['DOCUMENT_ROOT'].'/OfertaAki/sair.php';
-    header($sair);
+    $sair = 'http://'.$_SERVER['SERVER_NAME'].'/OfertaAki';
+    echo "
+        <script type='text/javascript'>
+            location.href='".$sair."';
+        </script>
+    ";
 ?>
