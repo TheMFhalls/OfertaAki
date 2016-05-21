@@ -10,7 +10,10 @@
 		on id_est_cid = id_est where nome_cid like '$q%'
 	";
 
-	$getCidade = $connection->query($query);
+	$connection = new config();
+	$conexao = $connection->getConnection();
+
+	$getCidade = $conexao->query($query);
 
 	header("Content-type: application/json");
 	echo json_encode($getCidade->fetchAll());

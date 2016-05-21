@@ -33,7 +33,9 @@ class loginComerciante extends config {
 			email_com = '".$this->email_com."' AND
 			senha_com = '".$this->senha_com."'
 		";
-		$this->connection->query($query);
+		$busca = $this->connection->getConnection();
+		$busca = $busca->query($query);
+		echo 123;
 	}
 
 	public function gerar(){
