@@ -31,13 +31,12 @@
 					</div>
 				</div>
 				<div class="col-sm-6 text-center">
-					<a href="">
-						<div class="souComerciante col-sm-12 paddin0px">
-							<span>
-								Sou Comerciante
-							</span>
-						</div>
-					</a>
+					<div class="souComerciante col-sm-12 paddin0px"
+					onclick="introdutionHome();">
+						<span>
+							Sou Comerciante
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>

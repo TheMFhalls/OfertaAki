@@ -141,12 +141,6 @@ label, .label {
 	word-break: break-word;
 }
 
-
-.container{
-	width: 970px !important;
-	margin: auto;	
-}
-
 .padding0px{
 	padding: 0px !important;
 }
@@ -198,6 +192,7 @@ li.liListaCidade:hover{
 	border: 1px solid #E47925;
 	height: 200px;
 	font-size: 30px;
+	color: #2c2c2c;
 }
 
 .cidadeGeral{
@@ -206,6 +201,8 @@ li.liListaCidade:hover{
 
 .souComerciante:hover{
 	background: rgba(97, 176, 63, 0.70);
+	color: #E47925;
+	cursor: pointer;
 }
 
 .souComerciante span,
