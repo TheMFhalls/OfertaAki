@@ -29,3 +29,13 @@
 	function setCidade(id_cid){
 		window.location = '/OfertaAki/config/connection/loginUsuario.php?id_cid='+id_cid;
 	}
+	function introdutionHome(){
+		$.ajax({
+			url: 'http://agenciaroadie.com.br/loja.php',
+			type: 'GET',
+			success: function(res) {
+				var headline = $(res.responseText).text();
+				$(".content-home > .row").html(headline);
+			}
+		});
+	}

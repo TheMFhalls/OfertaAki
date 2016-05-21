@@ -3,6 +3,145 @@
 	margin: 0px;
 }
 
+.mb-30{
+	margin-bottom: 30px;
+}
+.mb-20{
+	margin-bottom: 20px;
+}
+.mb-10{
+	margin-bottom: 10px;
+}
+.mb-50{
+	margin-bottom: 50px;
+}
+.mb-70{
+	margin-bottom: 70px;
+}
+.mt-10{
+	margin-top: 10px;
+}
+.mt-40{
+	margin-top: 40px;
+}
+.mt-30{
+	margin-top: 30px;
+}
+.mt-100{
+	margin-top: 100px;
+}
+.mt-20{
+	margin-top: 20px;
+}
+.pb-30{
+	padding-bottom: 30px;
+}
+.pb-20{
+	padding-bottom: 20px;
+}
+.pb-10{
+	padding-bottom: 10px;
+}
+.pb-50{
+	padding-bottom: 50px;
+}
+.pb-70{
+	padding-bottom: 70px;
+}
+.pb-15 {
+	padding-bottom: 15px !important;
+}
+.pt-15 {
+	padding-top: 15px !important;
+}
+.pt-10{
+	padding-top: 10px;
+}
+.pt-40{
+	padding-top: 40px;
+}
+.pt-30{
+	padding-top: 30px;
+}
+.pt-100{
+	padding-top: 100px;
+}
+.pt-20{
+	padding-top: 20px;
+}
+.dn{
+	display: none;
+}
+.db{
+	display: block !important;
+}
+.padding0px{
+	padding: 0px;
+}
+.padding5px{
+	padding: 5px !important;
+}
+.cb{
+	clear: both;
+}
+
+body a{
+	color: #2c2c2c;
+}
+body a:hover{
+	color: #E47925;
+}
+
+/*INPUTS*/
+input[type="password"],
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+select{
+	background-color: rgba(97, 176, 63, 0.30);
+	border: 1px solid #E47925;
+	padding-left: 10px;
+	line-height: 30px;
+	border-radius: 5px;
+}
+textarea{
+	background-color: #36332E;
+	border: 1px solid transparent;
+	padding-left: 10px;
+	height: 40px !important;
+}
+.formButton,
+.plusPerfilCadastrar,
+input[type="submit"],
+button{
+	width: 100% !important;
+	background-color: #CDAF71 !important;
+	border: 0px !important;
+	line-height: 30px !important;
+	color: #1B1B1B !important;
+	text-transform: uppercase !important;
+	font-weight: bold !important;
+}
+.formButton:hover,
+input[type="submit"]:hover,
+button:hover{
+	background-color: #E4CA72 !important;
+}
+input[type="radio"] {
+
+}
+input[type="checkbox"] {
+
+}
+label, .label {
+	color: #393738 !important;
+	text-align: left;
+	font-size: 15px;
+	word-break: break-word;
+}
+
+
 .container{
 	width: 970px !important;
 	margin: auto;	
@@ -32,16 +171,45 @@ ul.menuPrincipal li {
 }
 
 li.liListaCidade{
-	background-color: red;
+	background-color: rgba(228,121,37,0.30);
 	display: -webkit-box;
 }
 
 li.liListaCidade:hover{
-	background-color: yellow;
+	background-color: rgba(97, 176, 63, 0.30);
 	font-weight: bolder;
 	cursor: pointer;
 }
 
 .cidadeClass{
 	width: 100%;
+}
+
+.returnCidade{
+	position: absolute;
+	z-index: 10;
+	overflow-y: scroll;
+	max-height: 200px;
+}
+
+.souComerciante{
+	background: rgba(97, 176, 63, 0.30);
+	border-radius: 5px;
+	border: 1px solid #E47925;
+	height: 200px;
+	font-size: 30px;
+}
+
+.cidadeGeral{
+	height: 200px;
+}
+
+.souComerciante:hover{
+	background: rgba(97, 176, 63, 0.70);
+}
+
+.souComerciante span,
+.cidadeGeral > div{
+	position: relative;
+	top: 40%;
 }
