@@ -15,11 +15,7 @@
 		</div>
 		<div class="content content-home">
 			<div class="row">
-				<div class="row">
-					<?php
-						include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/content.php';
-					?>
-				</div>
+
 			</div>
 		</div>
 	</div>
