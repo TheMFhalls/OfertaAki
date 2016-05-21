@@ -9,7 +9,7 @@
 		<div class="content content-home">
 			<div class="row">
 				<label for="cidade" class="cidateLabel col-sm-6 text-center">
-					Informe sua Cidade 2222:
+					Informe sua Cidade :
 				</label>
 				<input class="cidadeClass col-sm-6 padding0px" autocomplete="off" id="cidadeId" type="text" 
 				name="cidade" onkeyup="javascript:getCidade();" onblur="javascript:setReturnCidade();" />
