@@ -31,7 +31,7 @@ function setCidade(id_cid){
 function introdutionHome(){
 	var raiz = location.origin;
 	$.ajax({
-		url: raiz+'/OfertaAki/ajax/opcoesComerciante.php',
+		url: raiz+'/OfertaAki/ajax/opcoesComerciante.html',
 		type: 'GET',
 		success: function(res) {
 			var headline = $(res.responseText).text();
