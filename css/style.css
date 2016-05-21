@@ -41,3 +41,7 @@ li.liListaCidade:hover{
 	font-weight: bolder;
 	cursor: pointer;
 }
+
+.cidadeClass{
+	width: 100%;
+}
