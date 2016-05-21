@@ -36,11 +36,15 @@ class loginComerciante extends config {
 		$busca = $this->connection->getConnection();
 		$busca = $busca->query($query);
 		$busca = $busca->fetchAll();
-		echo $busca[0]['cnpj_com'];
+		return $busca[0];
 	}
 
 	public function gerar(){
-		$this->busca_com();
+		$comerciante = $this->busca_com();
+		foreach($comerciante as $coluna => $valor){
+			$_SESSION['comerciante'][$coluna] =
+				$valor;
+		}
 	}
 
 	public function setConnection(){
