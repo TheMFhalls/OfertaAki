@@ -35,7 +35,8 @@ class loginComerciante extends config {
 		";
 		$busca = $this->connection->getConnection();
 		$busca = $busca->query($query);
-		echo 123;
+		$busca = $busca->fetchAll();
+		echo $busca[0]['cnpj_com'];
 	}
 
 	public function gerar(){
