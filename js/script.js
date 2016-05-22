@@ -32,3 +32,7 @@ function introdutionHome(){
 	var raiz = location.origin+'/OfertaAki/ajax/opcoesComerciante.html #load';
 	$(".content-home > .row").load(raiz);
 }
+function logarComerciante(){
+	var raiz = location.origin+'/OfertaAki/ajax/logarComerciante.html #load';
+	$(".content-home > .row").load(raiz);
+}

@@ -104,6 +104,7 @@ select{
 	padding-left: 10px;
 	line-height: 30px;
 	border-radius: 5px;
+	width: 100%;
 }
 textarea{
 	background-color: #36332E;
