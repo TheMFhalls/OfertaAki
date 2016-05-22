@@ -1,10 +1,5 @@
 <?php
-    @session_start();
-    session_destroy();
-    $sair = 'http://'.$_SERVER['SERVER_NAME'].'/OfertaAki';
-    echo "
-        <script type='text/javascript'>
-            location.href='".$sair."';
-        </script>
-    ";
+    include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/class/protect.class.php';
+    $protect = new protect();
+    $protect->sair();
 ?>
