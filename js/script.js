@@ -28,7 +28,7 @@ function setReturnCidade(){
 function setCidade(id_cid){
 	window.location = '/OfertaAki/config/connection/loginUsuario.php?id_cid='+id_cid;
 }
-function introdutionHome(){
+function opcoesComerciante(){
 	var raiz = location.origin+'/OfertaAki/ajax/opcoesComerciante.html #load';
 	$(".content-home > .row").load(raiz);
 }
