@@ -1,8 +1,3 @@
-$(document).ready(function(){
-	$(".content-home > .row").load(
-		location.origin+'/OfertaAki/ajax/indexGeral.html #load'
-	);
-});
 function getCidade(){
 	try{
 		var cidade = $('#cidadeId').val();
@@ -41,3 +36,10 @@ function logarComerciante(){
 	var raiz = location.origin+'/OfertaAki/ajax/logarComerciante.html #load';
 	$(".content-home > .row").load(raiz);
 }
+
+$(document).ready(function(){
+	$(".content-home > .row").load(
+		location.origin+'/OfertaAki/ajax/indexGeral.html #load'
+	);
+	alert();
+});
