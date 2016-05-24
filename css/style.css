@@ -211,3 +211,7 @@ li.liListaCidade:hover{
 	position: relative;
 	top: 40%;
 }
+
+.logoImagemImg{
+	cursor: pointer;
+}
