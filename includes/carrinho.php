@@ -1,3 +1,5 @@
-<div class="carinho carrinho-home text-center">
-	BOTÃO DE CADASTRO
+<div class="carinho souComerciante text-center">
+	<span onclick="opcoesComerciante();">
+		SOU COMERCIANTE
+	</span>
 </div>

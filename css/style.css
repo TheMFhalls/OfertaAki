@@ -163,6 +163,8 @@ ul.menuPrincipal li {
 
 .carinho{
 	background-color: red;
+	font-size: 15px !important;
+	height: auto !important;
 }
 
 li.liListaCidade{

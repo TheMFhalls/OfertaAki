@@ -6,22 +6,22 @@
 	include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/head.php';
 ?>
 <body>
-	<div class="container bodyGeral bodyGeral-home">
-		<div class="topGeral topGeral-home">
+	<div class="container bodyGeral bodyGeral-main">
+		<div class="topGeral topGeral-main">
 			<div class="row">
 				<?php 
 					include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/topGeral.php';
 				?>
 			</div>
 		</div>
-		<div class="destaqueGeral menuGeral-home">
+		<div class="destaqueGeral menuGeral-main">
 			<div class="row">				
 				<?php
 					include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/destaqueGeral.php';
 				?>
 			</div>
 		</div>		
-		<div class="content content-home">
+		<div class="content content-main">
 			<div class="row">
 				<?php
 					include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/content.php';
@@ -32,7 +32,7 @@
 </body>
 <footer>
 	<div class="container">
-		<div class="rodape rodape-home">
+		<div class="rodape rodape-main">
 			<div class="row">
 				<?php 
 					include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/rodape.php';
