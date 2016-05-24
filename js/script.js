@@ -36,10 +36,11 @@ function logarComerciante(){
 	var raiz = location.origin+'/OfertaAki/ajax/logarComerciante.html #load';
 	$(".content-home > .row").load(raiz);
 }
+function indexGeral(){
+	var raiz = location.origin+'/OfertaAki/ajax/indexGeral.html #load';
+	$(".content-home > .row").load(raiz);
+}
 
 $(document).ready(function(){
-	$(".content-home > .row").load(
-		location.origin+'/OfertaAki/ajax/indexGeral.html #load'
-	);
-	alert();
+	indexGeral();
 });
