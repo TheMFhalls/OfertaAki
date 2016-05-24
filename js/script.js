@@ -1,3 +1,8 @@
+$(document).ready(function(){
+	$(".content-home > .row").load(
+		location.origin+'/OfertaAki/ajax/indexGeral.html #load'
+	);
+});
 function getCidade(){
 	try{
 		var cidade = $('#cidadeId').val();
