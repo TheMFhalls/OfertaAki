@@ -42,7 +42,7 @@ class loginComerciante extends config {
 	public function gerar(){
 		$comerciante = $this->busca_com();
 		foreach($comerciante as $coluna => $valor){
-			$_SESSION['comerciante'][$coluna] =
+			$_SESSION['comercinte'][$coluna] =
 				$valor;
 		}
 	}
