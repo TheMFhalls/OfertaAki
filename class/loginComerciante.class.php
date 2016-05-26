@@ -45,7 +45,7 @@ class loginComerciante extends config {
 	}
 
 	public function gerar(){
-		if($comerciante = $this->busca_com()){			;
+		if($comerciante = $this->busca_com()){
 			$this->cnpj_com 			= $comerciante['cnpj_com'];
 			$this->senha_com 			= $comerciante['senha_com'];
 			$this->email_com 			= $comerciante['email_com'];
