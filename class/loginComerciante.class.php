@@ -41,10 +41,18 @@ class loginComerciante extends config {
 
 	public function gerar(){
 		$comerciante = $this->busca_com();
-		foreach($comerciante as $coluna => $valor){
-			$_SESSION['comerciante'][$coluna] =
-				$valor;
-		}
+		$this->cnpj_com = $comerciante['cnpj_com'];
+		$this->senha_com = $comerciante['senha_com'];
+		$this->email_com = $comerciante['email_com'];
+		$this->nomeFicticio_com = $comerciante['nomeFicticio_com'];
+		$this->id_cid_com = $comerciante['id_cid_com'];
+		$this->id_tel_com = $comerciante['id_tel_com'];
+		$this->horarioInicio_com = $comerciante['horarioInicio_com'];
+		$this->horarioFinal_com = $comerciante['horarioFinal_com'];
+		$this->razaoSocial_com = $comerciante['razaoSocial_com'];
+		$this->responsavel_com = $comerciante['responsavel_com'];
+		$this->bairro_com = $comerciante['bairro_com'];
+		$this->endereco_com = $comerciante['endereco_com'];
 	}
 
 	public function setConnection(){
