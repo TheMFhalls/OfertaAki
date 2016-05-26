@@ -1,6 +1,6 @@
 <?php
 
-	include_once $_SERVER['DOCUMENT_ROOT'] . '/OfertaAki/config/config.class.php';
+	include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/config/config.php';
 
 	extract($_GET);
 

@@ -7,7 +7,12 @@ class protect{
     }
 
     public function testar(){
-        if(!($this->geral())){
+        if(
+            !(
+                isset($_SESSION['usuario']['id_cid_usu']) ||
+                isset($_SESSION['comerciante']['cnpj_com'])
+            )
+        ){
             @session_destroy();
             header('location:index.php');
         }
@@ -16,7 +21,7 @@ class protect{
     private function geral(){
         if(
             !(
-                unserialize($_SESSION['usuario']) ||
+                isset($_SESSION['usuario']['id_cid_usu']) ||
                 isset($_SESSION['comerciante']['cnpj_com'])
             )
         ){
