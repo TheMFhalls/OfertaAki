@@ -16,7 +16,7 @@ class protect{
     private function geral(){
         if(
             !(
-                isset($_SESSION['usuario']['id_cid_usu']) ||
+                unserialize($_SESSION['usuario']) ||
                 isset($_SESSION['comerciante']['cnpj_com'])
             )
         ){
