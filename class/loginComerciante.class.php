@@ -58,9 +58,8 @@ class loginComerciante extends config {
 			$this->bairro_com 			= $comerciante['bairro_com'];
 			$this->endereco_com 		= $comerciante['endereco_com'];
 		}else{
-			echo "Não conectado";
+			return false;
 		}
-		print_r($this);
 	}
 
 	public function setConnection(){
