@@ -23,13 +23,6 @@ class loginUsuario{
 		return $this->ip_usu;
 	}
 
-	public function gerar(){
-		$_SESSION['usuario']['id_cid_usu']
-			= $this->id_cid_usu;
-		$_SESSION['usuario']['ip_usu']
-			= $this->ip_usu;
-	}
-
 }
 
 ?>

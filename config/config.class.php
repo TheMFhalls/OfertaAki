@@ -54,9 +54,6 @@ class config{
                     $this->pass
                 );
         }
-        public function __sleep(){
-                return array('connection');
-        }
 
 }
 

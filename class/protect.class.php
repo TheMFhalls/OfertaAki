@@ -7,12 +7,7 @@ class protect{
     }
 
     public function testar(){
-        if(
-            !(
-                isset($_SESSION['usuario']['id_cid_usu']) ||
-                isset($_SESSION['comerciante']['cnpj_com'])
-            )
-        ){
+        if(!($this->geral())){
             @session_destroy();
             header('location:index.php');
         }
