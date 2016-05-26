@@ -3,9 +3,10 @@
     include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/class/loginComerciante.class.php';
     include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/class/protect.class.php';
 
-    $_SESSION['comerciante'] = new loginComerciante($email_com, $senha_com);
+    $comerciante = new loginComerciante($email_com, $senha_com);
+    $_SESSION['comerciante'] = serialize($comerciante);
 
-    if($_SESSION['comerciante']->gerar()){
+    if(unserialize($_SESSION['comerciante'])->gerar()){
         header('location:../../main.php');
     }else{
 
