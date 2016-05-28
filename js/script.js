@@ -36,7 +36,7 @@ function getCidade2(el){
 				var retorno = "<ul class='ulListaCidade'>";
 				for(row in resp){
 					retorno += "<li class='liListaCidade' onclick='javascript:setCidade2("+
-					resp[row].id_cid+","+resp[row].nome_cid+","+resp[row].sigla_est+");'>"+
+					resp[row].id_cid+",\""+resp[row].nome_cid+"\",\""+resp[row].sigla_est+"\");'>"+
 					resp[row].nome_cid+" - "+resp[row].sigla_est+"</li>";
 				}
 				retorno += "</ul>";
@@ -44,7 +44,7 @@ function getCidade2(el){
 			}
 		});
 	}catch($e){
-		alert('Erro na getCidade : '+$e);
+		alert('Erro na getCidade2 : '+$e);
 	}
 }
 function setReturnCidade(){
@@ -54,8 +54,8 @@ function setCidade(id_cid){
 	window.location = '/OfertaAki/config/connection/loginUsuario.php?id_cid='+id_cid;
 }
 function setCidade2(id_cid, nome_cid, sigla_est){
-	$('#id_cid_com2').attr('value', nome_cid+' - '+sigla_est);
-	$('#id_cid_com').attr('value', id_cid);
+	$('#id_cid_com2').val(nome_cid+' - '+sigla_est);
+	$('#id_cid_com').val(id_cid);
 }
 function opcoesComerciante(){
 	var raiz = location.origin+'/OfertaAki/ajax/opcoesComerciante.html #load';
