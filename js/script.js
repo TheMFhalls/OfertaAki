@@ -36,6 +36,10 @@ function logarComerciante(){
 	var raiz = location.origin+'/OfertaAki/ajax/logarComerciante.html #load';
 	$(".content-home > .row").load(raiz);
 }
+function cadastroComerciante(){
+	var raiz = location.origin+'/OfertaAki/ajax/cadastroComerciante.html #load';
+	$(".content-home > .row").load(raiz);
+}
 function indexGeral(){
 	var raiz = location.origin+'/OfertaAki/ajax/indexGeral.html #load';
 	$(".content-home > .row").load(raiz);
