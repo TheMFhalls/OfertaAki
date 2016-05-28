@@ -76,11 +76,19 @@
                name="responsavel_com" placeholder="RESPONSAVEL PELO COMERCIO" maxlength="150" />
     </div>
     <div class="id_cid_com col-sm-6">
-        <label for="id_cid_com" class="text-center col-sm-6 mb-30">
+        <label for="id_cid_com2" class="text-center col-sm-6 mb-30">
             Informe o seu sua Cidade
         </label>
-        <input type="text" class="id_cid_com col-sm-6 mb-30" id="id_cid_com"
-               name="id_cid_com" placeholder="CIDADE" />
+        <div class="col-sm-6 padding0px">
+            <input class="id_cid_com2 col-sm-12 mb-30" autocomplete="off" id="id_cid_com2" type="text"
+                   name="id_cid_com2" onkeyup="javascript:getCidade2('#id_cid_com2');"
+                   onblur="javascript:setReturnCidade();"
+                   placeholder="Ex: Belo Horizonte"/>
+            <input type="hidden" name="id_cid_com" />
+            <div class="returnCidade padding0px col-sm-12" id="returnCidade"
+            style="position: absolute;top: 30px;">
+            </div>
+        </div>
     </div>
     <div class="bairro_com col-sm-6">
         <label for="bairro_com" class="text-center col-sm-6 mb-30">

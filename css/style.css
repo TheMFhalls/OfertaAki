@@ -187,6 +187,14 @@ li.liListaCidade:hover{
 	cursor: pointer;
 }
 
+.formCadastroComerciante li.liListaCidade{
+	background-color: rgba(228,121,37,1);
+}
+
+.formCadastroComerciante li.liListaCidade:hover{
+	background-color: #D0E7C5;
+}
+
 .cidadeClass{
 	width: 100%;
 }
