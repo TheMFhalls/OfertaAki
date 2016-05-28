@@ -1,6 +1,6 @@
-function getCidade(){
+function getCidade(el){
 	try{
-		var cidade = $('#cidadeId').val();
+		var cidade = $(el).val();
 		var raiz = location.origin;
 		$.ajax({
 			type     : "GET",
@@ -43,6 +43,9 @@ function cadastroComerciante(){
 function indexGeral(){
 	var raiz = location.origin+'/OfertaAki/ajax/indexGeral.html #load';
 	$(".content-home > .row").load(raiz);
+}
+function validaCadastroComerciante(){
+
 }
 
 $(document).ready(function(){
