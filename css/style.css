@@ -3,6 +3,11 @@
 	margin: 0px;
 }
 
+.container {
+	max-width: 970px !important;
+	margin: auto;
+}
+
 .mb-30{
 	margin-bottom: 30px;
 }
@@ -17,6 +22,9 @@
 }
 .mb-70{
 	margin-bottom: 70px;
+}
+.mb-100{
+	margin-bottom: 100px;
 }
 .mt-10{
 	margin-top: 10px;
@@ -217,4 +225,21 @@ li.liListaCidade:hover{
 
 .logoImagemImg{
 	cursor: pointer;
+}
+
+.tituloCadastroComerciante span{
+	font-size: 30px;
+}
+
+@media (max-width: 320px){
+
+}
+@media (min-width: 321px) and (max-width: 767px){
+
+}
+@media (min-width: 768px) and (max-width: 991px){
+
+}
+@media (min-width: 992px) {
+
 }
