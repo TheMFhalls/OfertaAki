@@ -4,6 +4,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+	<script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+	<script type="text/javascript" src="js/jquery.maskedinput-1.1.4.pack.js"></script>
 	<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
