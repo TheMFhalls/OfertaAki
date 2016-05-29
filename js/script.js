@@ -83,7 +83,13 @@ function verificaComerciante(email_com){
 			data     : { email_com : email_com},
 			async    : true,
 			success  : function(resp){
-				alert(resp);
+				if(resp.verificaComerciante == 'cadastrado'){
+					alert(true);
+					return true;
+				}else{
+					alert(false);
+					return false;
+				}
 			}
 		});
 	}catch($e){
@@ -128,8 +134,10 @@ function validaCadastroComerciante(){
 		alert("Informe seu ENDEREÇO!");
 		$('#endereco_com').val("");
 		$('#endereco_com').focus();
-	}else{
-
+	}else if(verificaComerciante($('#email_com').val())){
+		alert("EMAIL '"+$('#email_com').val()+"' já cadastrado, favor informe outro EMAIL!");
+		$('#email_com').val("");
+		$('#email_com').focus();
 	}
 }
 

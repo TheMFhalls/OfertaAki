@@ -12,10 +12,15 @@
 
     $connection = new config();
     $conexao = $connection->getConnection();
+    $teste = array();
 
     $verificaComerciante = $conexao->query($query);
-
+    if($verificaComerciante->rowCount()!=0){
+        $teste['verificaComerciante'] = 'cadastrado';
+    }else{
+        $teste['verificaComerciante'] = '';
+    }
     header("Content-type: application/json");
-    echo json_encode($getCidade->fetchAll());
+    echo json_encode($teste);
 
 ?>
