@@ -1,3 +1,7 @@
+//VARIAVEIS GLOBAIS
+	var retornoVerificaComerciante = null;
+//FIM VARIAVEIS GLOBAIS
+
 function getCidade(el){
 	try{
 		var cidade = $(el).val();
@@ -84,11 +88,9 @@ function verificaComerciante(email_com){
 			async    : true,
 			success  : function(resp){
 				if(resp.verificaComerciante == 'cadastrado'){
-					alert(true);
-					return true;
+					retornoVerificaComerciante = true;
 				}else{
-					alert(false);
-					return false;
+					retornoVerificaComerciante = false;
 				}
 			}
 		});
@@ -145,11 +147,12 @@ function validaCadastroComerciante(){
 			$('#endereco_com').focus();
 			return false;
 		}else{
-			var teste = verificaComerciante($('#email_com').val());
-			if(teste){
+			verificaComerciante($('#email_com').val());
+			if(retornoVerificaComerciante){
 				alert("EMAIL '"+$('#email_com').val()+"' já cadastrado, favor informe outro EMAIL!");
 				$('#email_com').val("");
 				$('#email_com').focus();
+				retornoVerificaComerciante = null;
 				return false;
 			}
 		}
