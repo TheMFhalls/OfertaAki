@@ -84,13 +84,11 @@ function verificaComerciante(email_com){
 			async    : true,
 			success  : function(resp){
 				if(resp.verificaComerciante == 'cadastrado'){
-					//alert(true);
-					//return true;
-					teste = true;
+					alert(true);
+					return true;
 				}else{
-					//alert(false);
-					//return false;
-					teste = false;
+					alert(false);
+					return false;
 				}
 			}
 		});
