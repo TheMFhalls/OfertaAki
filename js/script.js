@@ -81,7 +81,7 @@ function verificaComerciante(email_com){
 			dataType : "json",
 			url      : raiz+"/OfertaAki/ajax/verificaComerciante.php",
 			data     : { email_com : email_com},
-			async    : true,
+			//async    : true,
 			success  : function(resp){
 				if(resp.verificaComerciante == 'cadastrado'){
 					alert(true);
