@@ -265,6 +265,16 @@ li.liListaCidade:hover{
 	transition: 0.5s ease-out;
 }
 
+.closePopupGeral{
+	background: url("../img/cancel.png") no-repeat;
+	background-position-x: 100%;
+	background-position-y: 50%;
+	background-size: 32px;
+	height: 32px;
+	position: relative;
+	top: 90px;
+}
+
 @media (max-width: 320px){
 
 }
