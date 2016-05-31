@@ -239,6 +239,32 @@ li.liListaCidade:hover{
 	font-size: 30px;
 }
 
+.popupGeral {
+	position: fixed;
+	background: rgba(0,0,0,0.65);
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	right: 0px;
+	-webkit-transition: 0.5s ease-out;
+	-moz-transition: 0.5s ease-out;
+	-o-transition: 0.5s ease-out;
+	transition: 0.5s ease-out;
+}
+
+.conteudoPopup {
+	background: white;
+	height: 80%;
+	position: relative;
+	top: 100px;
+	border-radius: 20px;
+	padding: 20px;
+	-webkit-transition: 0.5s ease-out;
+	-moz-transition: 0.5s ease-out;
+	-o-transition: 0.5s ease-out;
+	transition: 0.5s ease-out;
+}
+
 @media (max-width: 320px){
 
 }
