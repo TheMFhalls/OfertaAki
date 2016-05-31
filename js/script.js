@@ -130,6 +130,14 @@ function validarCNPJ(cnpj){
 	return false;
 
 }
+function validaEmail(email){
+	var er = /^[a-zA-Z0-9][a-zA-Z0-9\._-]+@([a-zA-Z0-9\._-]+\.)[a-zA-Z-0-9]{2}/;
+	if(er.exec(email)){
+		return false;
+	}else{
+		return true;
+	}
+}
 function verificaComerciante(email_com){
 	try{
 		var raiz = location.origin;
@@ -164,6 +172,11 @@ function validaCadastroComerciante(){
 			$('#cnpj_com').focus();
 		}else if($('#email_com').val()==''){
 			alert("Informe seu EMAIL!");
+			$('#email_com').val("");
+			$('#email_com').focus();
+			return false;
+		}else if(validaEmail($('#email_com').val())){
+			alert("EMAIL Invalido!");
 			$('#email_com').val("");
 			$('#email_com').focus();
 			return false;
