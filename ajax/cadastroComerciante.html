@@ -87,7 +87,8 @@
         </label>
         <input type="text" class="cep_com col-sm-6 mb-30" id="cep_com"
                name="responsavel_com" placeholder="CEP" maxlength="10"
-               onclick="$(this).mask('99.999-999');" />
+               onclick="$(this).mask('99.999-999');"
+               onkeyup="buscaPorCep($(this));"/>
     </div>
     <div class="id_cid_com col-sm-6">
         <label for="id_cid_com2" class="text-center col-sm-6 mb-30">

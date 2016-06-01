@@ -138,6 +138,20 @@ function validaEmail(email){
 		return true;
 	}
 }
+function buscaPorCep(cep){
+	cep = cep.val();
+	if(cep.length >= 10){
+		cep.replace(/[^\d]+/g,'');
+		$.ajax({
+			type     : "GET",
+			dataType : "json",
+			url      : "https://viacep.com.br/ws/"+cep+"/json",
+			async    : true,
+			success  : function (resp){
+			}
+		});
+	}
+}
 function verificaComerciante(email_com){
 	try{
 		var raiz = location.origin;
