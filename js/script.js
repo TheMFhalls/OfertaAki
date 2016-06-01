@@ -142,12 +142,26 @@ function buscaPorCep(cep){
 	cep = cep.val();
 	if(cep.length >= 10){
 		cep.replace(/[^\d]+/g,'');
+		var raiz = location.origin;
 		$.ajax({
 			type     : "GET",
 			dataType : "json",
 			url      : "https://viacep.com.br/ws/"+cep+"/json",
 			async    : true,
 			success  : function (resp){
+				$('#id_cid_com2').val(resp.localidade);
+				$('#bairro_com').val(resp.bairro);
+				$('#endereco_com').val(resp.logradouro);
+				$.ajax({
+					type     : "GET",
+					dataType : "json",
+					url      : raiz+"/OfertaAki/ajax/getCidade.php",
+					data     : { q : resp.localidade},
+					async    : true,
+					success  : function (resp){
+						$('#id_cid_com').val(resp.id_cid);
+					}
+				});
 			}
 		});
 	}
