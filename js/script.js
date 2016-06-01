@@ -141,7 +141,7 @@ function validaEmail(email){
 function buscaPorCep(cep){
 	cep = cep.val();
 	if(cep.length >= 10){
-		cep.replace(/[^\d]+/g,'');
+		cep = cep.replace(/[^\d]+/g,'');
 		var raiz = location.origin;
 		$.ajax({
 			type     : "GET",
