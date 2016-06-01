@@ -16,7 +16,7 @@
         </label>
         <input type="text" class="cnpj_com col-sm-6 mb-30" id="cnpj_com"
                name="cnpj_com" placeholder="CNPJ" maxlength="18"
-               onclick="$(this).mask('99.999.999/9999-99');" />
+               onfocus="$(this).mask('99.999.999/9999-99');" />
     </div>
     <div class="email_com col-sm-6">
         <label for="email_com" class="text-center col-sm-6 mb-30">
@@ -87,7 +87,7 @@
         </label>
         <input type="text" class="cep_com col-sm-6 mb-30" id="cep_com"
                name="responsavel_com" placeholder="CEP" maxlength="10"
-               onclick="$(this).mask('99.999-999');"
+               onfocus="$(this).mask('99.999-999');"
                onkeyup="buscaPorCep($(this));"/>
     </div>
     <div class="id_cid_com col-sm-6">

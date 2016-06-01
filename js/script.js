@@ -221,6 +221,11 @@ function validaCadastroComerciante(){
 			$('#senha_com2').val("");
 			$('#senha_com2').focus();
 			return false;
+		}else if($('#cep_com').val()==''){
+			alert("Informe seu CEP!");
+			$('#cep_com').val("");
+			$('#cep_com').focus();
+			return false;
 		}else if($('#id_cid_com').val()==''){
 			alert("Informe sua CIDADE!");
 			$('#id_cid_com2').val("");
