@@ -159,7 +159,9 @@ function buscaPorCep(cep){
 					data     : { q : resp.localidade},
 					async    : true,
 					success  : function (resp){
-						$('#id_cid_com').val(resp.id_cid);
+						for(row in resp){
+							$('#id_cid_com').val(resp[row].id_cid);
+						}
 					}
 				});
 			}
