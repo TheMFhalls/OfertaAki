@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Tempo de geração: 27/05/2016 às 23:11
+-- Tempo de geração: 01/06/2016 às 07:43
 -- Versão do servidor: 5.5.38-35.2
 -- Versão do PHP: 5.4.31
 
@@ -5666,6 +5666,7 @@ CREATE TABLE IF NOT EXISTS `comerciante` (
   `horarioFinal_com` time DEFAULT NULL,
   `razaoSocial_com` varchar(100) DEFAULT NULL,
   `responsavel_com` varchar(150) NOT NULL,
+  `cep_com` varchar(10) NOT NULL,
   `bairro_com` varchar(100) NOT NULL,
   `endereco_com` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -5674,8 +5675,8 @@ CREATE TABLE IF NOT EXISTS `comerciante` (
 -- Fazendo dump de dados para tabela `comerciante`
 --
 
-INSERT INTO `comerciante` (`cnpj_com`, `email_com`, `senha_com`, `logo_com`, `nomeFicticio_com`, `id_cid_com`, `horarioInicio_com`, `horarioFinal_com`, `razaoSocial_com`, `responsavel_com`, `bairro_com`, `endereco_com`) VALUES
-('58.818.281/0001-74', 'maiconjunioheredeslopes130696@gmail.com', 'kjkszpj130696', '', 'Heredes Network', 591, '07:00:00', '18:00:00', 'Heredes Network', 'Maicon Junio Heredes Lopes', 'Esperança', 'rua japão, 71 esperança Justinopolis');
+INSERT INTO `comerciante` (`cnpj_com`, `email_com`, `senha_com`, `logo_com`, `nomeFicticio_com`, `id_cid_com`, `horarioInicio_com`, `horarioFinal_com`, `razaoSocial_com`, `responsavel_com`, `cep_com`, `bairro_com`, `endereco_com`) VALUES
+('58.818.281/0001-74', 'maiconjunioheredeslopes130696@gmail.com', 'kjkszpj130696', '', 'Heredes Network', 591, '07:00:00', '18:00:00', 'Heredes Network', 'Maicon Junio Heredes Lopes', '33.913-195', 'Esperança', 'rua japão, 71 esperança Justinopolis');
 
 -- --------------------------------------------------------
 
