@@ -1,5 +1,5 @@
 //VARIAVEIS GLOBAIS
-	var retornoVerificaComerciante = null;
+	var retornoVerificaComerciante = true;
 //FIM VARIAVEIS GLOBAIS
 
 function getCidade(el){
@@ -252,7 +252,7 @@ function validaCadastroComerciante(){
 				alert("EMAIL '"+$('#email_com').val()+"' já cadastrado, favor informe outro EMAIL!");
 				$('#email_com').val("");
 				$('#email_com').focus();
-				retornoVerificaComerciante = null;
+				retornoVerificaComerciante = true;
 				return false;
 			}else{
 				alert('Tudo Certo com o Form!');
