@@ -252,6 +252,8 @@ function validaCadastroComerciante(){
 				$('#email_com').focus();
 				retornoVerificaComerciante = null;
 				return false;
+			}else{
+				alert('Tudo Certo com o Form!');
 			}
 		}
 	}catch($e){
