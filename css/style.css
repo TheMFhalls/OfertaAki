@@ -4,7 +4,7 @@
 }
 
 .container {
-	max-width: 970px !important;
+	/*max-width: 970px !important;*/
 	margin: auto;
 }
 
@@ -108,12 +108,10 @@ input[type="number"],
 input[type="file"],
 input[type="time"],
 select{
-	background-color: rgba(97, 176, 63, 0.30);
-	border: 1px solid #E47925;
-	padding-left: 10px;
-	line-height: 30px;
-	border-radius: 5px;
-	/*width: 100%;*/
+    border: 0px;
+    padding-left: 10px;
+    line-height: 30px;
+    border-bottom: 2px solid #E47925;
 }
 textarea{
 	background-color: #36332E;

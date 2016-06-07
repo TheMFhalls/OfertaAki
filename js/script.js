@@ -1,5 +1,6 @@
 //VARIAVEIS GLOBAIS
 	var retornoVerificaComerciante = true;
+	var contagemTelefoneComerciante = 1;
 //FIM VARIAVEIS GLOBAIS
 
 function getCidade(el){
@@ -72,6 +73,18 @@ function logarComerciante(){
 function cadastroComerciante(){
 	var raiz = location.origin+'/OfertaAki/ajax/cadastroComerciante.html #load';
 	$(".content-home > .row").load(raiz);
+}
+function addTelefoneComerciante(){
+	var texto = "";
+	texto += "	<div class='col-sm-6'>";
+	texto += "		<label for='telefone_com_"+contagemTelefoneComerciante+"' class='text-center col-sm-6 mb-30'>";
+	texto += "			Informe seu Telefone:";
+	texto += "		</label>";
+	texto += "		<input type='text' class='telefone_com_"+contagemTelefoneComerciante+" col-sm-6 mb-30' ";
+	texto += "		id='telefone_com_"+contagemTelefoneComerciante+"' name='telefone_com_"+contagemTelefoneComerciante+"' />";
+	texto += "	</div>";
+	$('.telefone_comerciante').prepend(texto);
+	contagemTelefoneComerciante++;
 }
 function indexGeral(){
 	var raiz = location.origin+'/OfertaAki/ajax/indexGeral.html #load';
@@ -266,6 +279,9 @@ function validaCadastroComerciante(){
 	}catch($e){
 		alert('Erro na validação do cadastro!');
 	}
+}
+function openPopUp(){
+	$('.popupGeral').attr('style', 'display: block;');
 }
 
 $(document).ready(function(){

@@ -51,6 +51,126 @@ class loginComerciante extends config {
 		$this->connection = new config();
 	}
 
+	public function getBairroCom()
+	{
+		return $this->bairro_com;
+	}
+
+	public function getCnpjCom()
+	{
+		return $this->cnpj_com;
+	}
+
+	public function getEmailCom()
+	{
+		return $this->email_com;
+	}
+
+	public function getEnderecoCom()
+	{
+		return $this->endereco_com;
+	}
+
+	public function getHorarioFinalCom()
+	{
+		return $this->horarioFinal_com;
+	}
+
+	public function getHorarioInicioCom()
+	{
+		return $this->horarioInicio_com;
+	}
+
+	public function getIdCidCom()
+	{
+		return $this->id_cid_com;
+	}
+
+	public function getIdTelCom()
+	{
+		return $this->id_tel_com;
+	}
+
+	public function getNomeFicticioCom()
+	{
+		return $this->nomeFicticio_com;
+	}
+
+	public function getRazaoSocialCom()
+	{
+		return $this->razaoSocial_com;
+	}
+
+	public function getResponsavelCom()
+	{
+		return $this->responsavel_com;
+	}
+
+	public function getSenhaCom()
+	{
+		return $this->senha_com;
+	}
+
+	public function setBairroCom($bairro_com)
+	{
+		$this->bairro_com = $bairro_com;
+	}
+
+	public function setCnpjCom($cnpj_com)
+	{
+		$this->cnpj_com = $cnpj_com;
+	}
+
+	public function setEmailCom($email_com)
+	{
+		$this->email_com = $email_com;
+	}
+
+	public function setEnderecoCom($endereco_com)
+	{
+		$this->endereco_com = $endereco_com;
+	}
+
+	public function setHorarioFinalCom($horarioFinal_com)
+	{
+		$this->horarioFinal_com = $horarioFinal_com;
+	}
+
+	public function setHorarioInicioCom($horarioInicio_com)
+	{
+		$this->horarioInicio_com = $horarioInicio_com;
+	}
+
+	public function setIdCidCom($id_cid_com)
+	{
+		$this->id_cid_com = $id_cid_com;
+	}
+
+	public function setIdTelCom($id_tel_com)
+	{
+		$this->id_tel_com = $id_tel_com;
+	}
+
+	public function setNomeFicticioCom($nomeFicticio_com)
+	{
+		$this->nomeFicticio_com = $nomeFicticio_com;
+	}
+
+	public function setRazaoSocialCom($razaoSocial_com)
+	{
+		$this->razaoSocial_com = $razaoSocial_com;
+	}
+
+	public function setResponsavelCom($responsavel_com)
+	{
+		$this->responsavel_com = $responsavel_com;
+	}
+
+	public function setSenhaCom($senha_com)
+	{
+		$this->senha_com = $senha_com;
+	}
+
 }
 
 ?>

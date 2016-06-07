@@ -21,7 +21,7 @@
 	</div>
 </body>
 <footer>
-	<div class="container">
+	<div class="container containerTesteFooter">
 		<div class="rodape rodape-home">
 			<div class="row">
 				<?php 
