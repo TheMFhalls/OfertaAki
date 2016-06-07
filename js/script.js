@@ -63,6 +63,7 @@ function setCidade2(id_cid, nome_cid, sigla_est){
 	$('#id_cid_com').val(id_cid);
 }
 function opcoesComerciante(){
+	contagemTelefoneComerciante = 1;
 	var raiz = location.origin+'/OfertaAki/ajax/opcoesComerciante.html #load';
 	$(".content-home > .row").load(raiz);
 }
@@ -78,12 +79,13 @@ function addTelefoneComerciante(){
 	var texto = "";
 	texto += "	<div class='col-sm-6'>";
 	texto += "		<label for='telefone_com_"+contagemTelefoneComerciante+"' class='text-center col-sm-6 mb-30'>";
-	texto += "			Informe seu Telefone:";
+	texto += "			Informe o "+contagemTelefoneComerciante+"º Telefone:";
 	texto += "		</label>";
 	texto += "		<input type='text' class='telefone_com_"+contagemTelefoneComerciante+" col-sm-6 mb-30' ";
-	texto += "		id='telefone_com_"+contagemTelefoneComerciante+"' name='telefone_com_"+contagemTelefoneComerciante+"' />";
+	texto += "		id='telefone_com_"+contagemTelefoneComerciante+"' onfocus='$(this).mask(\"99 9 9999-9999\");' ";
+	texto += "		name='telefone_com_"+contagemTelefoneComerciante+"' />";
 	texto += "	</div>";
-	$('.telefone_comerciante').prepend(texto);
+	$('.telefone_comerciante').append(texto);
 	contagemTelefoneComerciante++;
 }
 function indexGeral(){
