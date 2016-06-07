@@ -75,18 +75,26 @@ function cadastroComerciante(){
 	var raiz = location.origin+'/OfertaAki/ajax/cadastroComerciante.html #load';
 	$(".content-home > .row").load(raiz);
 }
+function removeTelefoneComerciante($el){
+	$($el).attr('style', 'display: none;');
+	contagemTelefoneComerciante--;
+}
 function addTelefoneComerciante(){
 	var texto = "";
-	texto += "	<div class='col-sm-6'>";
-	texto += "		<label for='telefone_com_"+contagemTelefoneComerciante+"' class='text-center col-sm-6 mb-30'>";
+	texto += "	<div class='col-sm-6 telefone_com_"+contagemTelefoneComerciante+"'>";
+	texto += "		<label for='telefone_com_"+contagemTelefoneComerciante+"' class='text-center col-sm-5 mb-30'>";
 	texto += "			Informe o "+contagemTelefoneComerciante+"º Telefone:";
 	texto += "		</label>";
-	texto += "		<input type='text' class='telefone_com_"+contagemTelefoneComerciante+" col-sm-6 mb-30' ";
+	texto += "		<input type='text' class='telefone_com_"+contagemTelefoneComerciante+" col-sm-5 mb-30' ";
 	texto += "		id='telefone_com_"+contagemTelefoneComerciante+"' onfocus='$(this).mask(\"99 9 9999-9999\");' ";
 	texto += "		name='telefone_com_"+contagemTelefoneComerciante+"' />";
+	texto += "		<div class='col-sm-2 deleteTelefone' onclick='removeTelefoneComerciante(\".telefone_com_"+contagemTelefoneComerciante+"\");'>";
+	texto += "		</div>";
 	texto += "	</div>";
+	$('#inserirTelefone').val('Inserir Mais Telefones');
 	$('.telefone_comerciante').append(texto);
 	contagemTelefoneComerciante++;
+	$('#countTelefone').val(contagemTelefoneComerciante);
 }
 function indexGeral(){
 	var raiz = location.origin+'/OfertaAki/ajax/indexGeral.html #load';

@@ -161,6 +161,15 @@ label, .label {
 	max-width: 150px;
 }
 
+.deleteTelefone{
+	background: url("../img/cancel.png") no-repeat;
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-size: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
 ul.menuPrincipal {}
 
 ul.menuPrincipal li {

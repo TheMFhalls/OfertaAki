@@ -1,7 +1,7 @@
 <div id="load" class="col-sm-12 padding0px formCadastroComerciante">
-    <!--<a class="col-sm-12" onclick="cadastroComerciante();">-->
-        <!--teste-->
-    <!--</a>-->
+    <a class="col-sm-12" onclick="cadastroComerciante();">
+        teste
+    </a>
     <!--<a class="col-sm-12" onclick="verificaComerciante('maiconjunioheredeslopes130696@gmail.com');">-->
         <!--verifica-->
     <!--</a>-->
@@ -81,9 +81,6 @@
         <input type="text" class="responsavel_com col-sm-6 mb-30" id="responsavel_com"
                name="responsavel_com" placeholder="RESPONSAVEL PELO COMERCIO" maxlength="150" />
     </div>
-    <div class="telefone_comerciante">
-        <input class="col-sm-12 mb-30" onclick="addTelefoneComerciante();" type="submit" value="Inserir Mais Telefones">
-    </div>
     <div class="cep_com col-sm-6">
         <label for="cep_com" class="text-center col-sm-6 mb-30">
             Informe o CEP da sua empresa
@@ -121,6 +118,11 @@
         </label>
         <input type="text" class="endereco_com col-sm-6 mb-30" id="endereco_com"
                name="endereco_com" placeholder="ENDEREÇO" />
+    </div>
+    <div class="telefone_comerciante col-sm-12">
+        <input type="hidden" name="countTelefone" id="countTelefone" class="countTelefone" />
+        <input class="col-sm-12 mb-30" id="inserirTelefone" onclick="addTelefoneComerciante();"
+               type="submit" value="Inserir Telefone">
     </div>
     <div class="buttonSubmit col-sm-12 mb-100">
         <button onclick="validaCadastroComerciante();">CADASTRAR</button>
