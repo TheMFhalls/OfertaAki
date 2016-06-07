@@ -79,6 +79,25 @@ function removeTelefoneComerciante($el){
 	$($el).attr('style', 'display: none;');
 	contagemTelefoneComerciante--;
 }
+function setComerciante(){
+	try{
+		var raiz = location.origin;
+		$.ajax({
+			type     : "GET",
+			dataType : "json",
+			url      : raiz+"/OfertaAki/ajax/setComerciante.php",
+			data     : {
+				cnpj_com : $('#cnpj_com').val(),
+			},
+			async    : true,
+			success  : function (resp){
+				alert('Usuario Inserido com sucesso!');
+			}
+		});
+	}catch($e){
+		alert('Erro na setComerciante : '+$e);
+	}
+}
 function addTelefoneComerciante(){
 	var texto = "";
 	texto += "	<div class='col-sm-6 telefone_com_"+contagemTelefoneComerciante+"'>";

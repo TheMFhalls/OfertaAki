@@ -51,6 +51,10 @@ class loginComerciante extends config {
 		$this->connection = new config();
 	}
 
+	public function setTelefoneCom(){
+
+	}
+
 	public function getBairroCom()
 	{
 		return $this->bairro_com;
