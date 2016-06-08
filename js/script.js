@@ -88,6 +88,18 @@ function setComerciante(){
 			url      : raiz+"/OfertaAki/ajax/setComerciante.php",
 			data     : {
 				cnpj_com : $('#cnpj_com').val(),
+				email_com : $('#email_com').val(),
+				senha_com : $('#senha_com').val(),
+				logo_com : $('#logo_com').val(),
+				nomeFicticio_com : $('#nomeFicticio_com').val(),
+				id_cid_com : $('#id_cid_com').val(),
+				horarioInicio_com : $('#horarioInicio_com').val(),
+				horarioFinal_com : $('#horarioFinal_com').val(),
+				razaoSocial_com : $('#razaoSocial_com').val(),
+				responsavel_com : $('#responsavel_com').val(),
+				cep_com : $('#cep_com').val(),
+				bairro_com : $('#bairro_com').val(),
+				endereco_com : $('#endereco_com').val()
 			},
 			async    : true,
 			success  : function (resp){
