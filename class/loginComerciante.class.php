@@ -47,6 +47,15 @@ class loginComerciante extends config {
 		}
 	}
 
+	public function validaLogin(){
+		$comerciante = $this->busca_com();
+		if($comerciante->rowCount() == 1){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 	public function setConnection(){
 		$this->connection = new config();
 	}

@@ -1,7 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: heredes
- * Date: 08/06/16
- * Time: 22:00
- */
+
+    include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/class/loginComerciante.class.php';
+
+    extract($_GET);
+
+    $comerciante = new loginComerciante($email_com, $senha_com);
+
+    $comerciante->validaLogin();
+
+?>
