@@ -2,6 +2,6 @@
     <div class="closePopupGeral container"
     onclick="$('.popupGeral').attr('style', 'display: none;');">
     </div>
-    <div class="conteudoPopup container">
+    <div class="conteudoPopup container text-center">
     </div>
 </div>

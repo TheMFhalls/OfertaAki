@@ -103,7 +103,11 @@ function setComerciante(){
 			},
 			async    : true,
 			success  : function (resp){
-				alert('Usuario Inserido com sucesso!');
+				if(resp['retorno'] == 'inserido'){
+					openPopUp('Usuario Inserido com sucesso!');
+				}else{
+					openPopUp('Falha ao cadastrar!');
+				}
 			}
 		});
 	}catch($e){
@@ -314,15 +318,19 @@ function validaCadastroComerciante(){
 				retornoVerificaComerciante = true;
 				return false;
 			}else{
-				alert('Tudo Certo com o Form!');
+				setComerciante();
 			}
 		}
 	}catch($e){
 		alert('Erro na validação do cadastro!');
 	}
 }
-function openPopUp(){
+function openPopUp(valor){
 	$('.popupGeral').attr('style', 'display: block;');
+	$('.conteudoPopup').text(valor);
+}
+function validaLoginComerciante(){
+
 }
 
 $(document).ready(function(){
