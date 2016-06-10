@@ -49,7 +49,8 @@ class loginComerciante extends config {
 
 	public function validaLogin(){
 		$comerciante = $this->busca_com();
-		if($comerciante->rowCount() == 1){
+		if($comerciante['cnpj_com'] != ''){
+			$this->gerar();
 			return true;
 		}else{
 			return false;

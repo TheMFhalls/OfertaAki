@@ -330,7 +330,28 @@ function openPopUp(valor){
 	$('.conteudoPopup').text(valor);
 }
 function validaLoginComerciante(){
-
+	try{
+		var raiz = location.origin;
+		$.ajax({
+			type     : "GET",
+			dataType : "json",
+			url      : raiz+"/OfertaAki/ajax/getLogarComerciante.php",
+			data     : {
+				email_com : $('#email_com').val(),
+				senha_com : $('#senha_com').val()
+			},
+			async    : true,
+			success  : function(resp){
+				if(resp.retorno == 1){
+					openPopUp('Usuario logado com sucesso!');
+				}else{
+					openPopUp('Erro ao logar usuario!');
+				}
+			}
+		});
+	}catch($e){
+		alert('Erro na validaLoginComerciante : '+$e);
+	}
 }
 
 $(document).ready(function(){

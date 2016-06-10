@@ -112,6 +112,7 @@ select{
     padding-left: 10px;
     line-height: 30px;
     border-bottom: 2px solid #E47925;
+	outline: -webkit-focus-ring-color auto 0px;
 }
 textarea{
 	background-color: #36332E;
@@ -129,6 +130,7 @@ button{
 	line-height: 30px !important;
 	border-radius: 5px;
 	width: 100% !important;
+	outline: -webkit-focus-ring-color auto 0px;
 }
 .formButton:hover,
 input[type="submit"]:hover,

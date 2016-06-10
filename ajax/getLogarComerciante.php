@@ -6,6 +6,14 @@
 
     $comerciante = new loginComerciante($email_com, $senha_com);
 
-    $comerciante->validaLogin();
+    $retorno = array();
+    if($comerciante->validaLogin()){
+        $retorno['retorno'] = 1;
+    }else{
+        $retorno['retorno'] = 0;
+    }
+
+    header("Content-type: application/json");
+    echo json_encode($retorno);
 
 ?>
