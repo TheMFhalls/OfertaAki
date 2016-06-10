@@ -263,7 +263,7 @@ li.liListaCidade:hover{
 
 .conteudoPopup {
 	background: white;
-	height: 80%;
+	height: auto;
 	position: relative;
 	top: 100px;
 	border-radius: 20px;
