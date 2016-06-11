@@ -67,6 +67,9 @@ function opcoesComerciante(){
 	var raiz = location.origin+'/OfertaAki/ajax/opcoesComerciante.html #load';
 	$(".content-home > .row").load(raiz);
 }
+function ajaxLoad(onquevai, onquevem){
+	$(onquevai).load(location.origin+"/OfertaAki/"+onquevem+" #load");
+}
 function logarComerciante(){
 	var raiz = location.origin+'/OfertaAki/ajax/logarComerciante.html #load';
 	$(".content-home > .row").load(raiz);
@@ -344,6 +347,9 @@ function validaLoginComerciante(){
 			success  : function(resp){
 				if(resp.retorno == 1){
 					openPopUp('Usuario logado com sucesso!');
+					setTimeout(function(){
+						window.location=raiz+"/OfertaAki/main.php";
+					},3000);
 				}else{
 					openPopUp('Erro ao logar usuario!');
 				}
