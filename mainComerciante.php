@@ -7,18 +7,18 @@
     <body>
         <div class="col-sm-12 bodyMainComerciante padding0px">
             <div class="col-sm-3 padding0px menusMainComerciante">
-                <div class="col-sm-12 mb-10 mt-10 logoMainComerciante">
+                <div class="col-sm-12 pb-10 pt-10 logoMainComerciante">
                     <img src="  /OfertaAki/img/logo.png" alt="">
                 </div>
                 <div class="col-sm-12 padding0px menuOpcoesMainComerciante">
                     <ul>
                         <li class="col-sm-12"
-                            onclick="ajaxLoad('.conteudoMainComerciante',
-                            'ajax/comercianteLogado/ofertas/cadastroOferta.html')">
+                            onclick="">
                             Ver Ofertas
                         </li>
                         <li class="col-sm-12"
-                        onclick="">
+                        onclick="ajaxLoad('.conteudoMainComerciante',
+                            'ajax/comercianteLogado/ofertas/cadastroOferta.html');">
                             Inserir Ofertas
                         </li>
                         <li class="col-sm-12">

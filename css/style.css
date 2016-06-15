@@ -204,6 +204,11 @@ label, .label {
 	height: 100%;
 }
 
+.logoMainComerciante {
+	background: #dfffca;
+	border-right: 1px solid #002B00;
+}
+
 .deleteTelefone{
 	background: url("../img/cancel.png") no-repeat;
 	background-position-x: 50%;
