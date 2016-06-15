@@ -348,7 +348,7 @@ function validaLoginComerciante(){
 				if(resp.retorno == 1){
 					openPopUp('Usuario logado com sucesso!');
 					setTimeout(function(){
-						window.location=raiz+"/OfertaAki/main.php";
+						window.location=raiz+"/OfertaAki/mainComerciante.php";
 					},3000);
 				}else{
 					openPopUp('Erro ao logar usuario!');
@@ -359,6 +359,26 @@ function validaLoginComerciante(){
 		alert('Erro na validaLoginComerciante : '+$e);
 	}
 }
+function validaOferta() {
+	//if($('#').val()==''){
+	//	alert("!");
+	//	$('#').val("");
+	//	$('#').focus();
+	//	return false;
+	//}else
+	if($('#titulo_ofe').val() == '') {
+		alert("Informe o Titulo da Oferta!");
+		$('#titulo_ofe').val("");
+		$('#titulo_ofe').focus();
+		return false;
+	}else if($('#titulo_ofe').val() == '') {
+		alert("Informe o Titulo da Oferta!");
+		$('#titulo_ofe').val("");
+		$('#titulo_ofe').focus();
+		return false;
+	}else
+}
+
 
 $(document).ready(function(){
 	indexGeral();

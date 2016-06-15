@@ -8,7 +8,7 @@
         <div class="col-sm-12 bodyMainComerciante padding0px">
             <div class="col-sm-3 padding0px menusMainComerciante">
                 <div class="col-sm-12 pb-10 pt-10 logoMainComerciante">
-                    <img src="  /OfertaAki/img/logo.png" alt="">
+                    <img src="/OfertaAki/img/logo.png" alt="">
                 </div>
                 <div class="col-sm-12 padding0px menuOpcoesMainComerciante">
                     <ul>
@@ -18,7 +18,7 @@
                         </li>
                         <li class="col-sm-12"
                         onclick="ajaxLoad('.conteudoMainComerciante',
-                            'ajax/comercianteLogado/ofertas/cadastroOferta.html');">
+                            'ajax/comercianteLogado/ofertas/cadastroOferta.php');">
                             Inserir Ofertas
                         </li>
                         <li class="col-sm-12">
@@ -30,7 +30,8 @@
                         <li class="col-sm-12">
                             Editar Conta
                         </li>
-                        <li class="col-sm-12">
+                        <li class="col-sm-12"
+                        onclick="window.location='<?php echo'http://'.$_SERVER['SERVER_NAME'].'/OfertaAki/security/sair.php';?>'">
                             Sair
                         </li>
                     </ul>
