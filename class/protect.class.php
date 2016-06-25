@@ -18,6 +18,17 @@ class protect{
         }
     }
 
+    public function testarComerciante(){
+        if(
+        !(
+            isset($_SESSION['comerciante']['cnpj_com'])
+        )
+        ){
+            @session_destroy();
+            header('location:index.php');
+        }
+    }
+
     private function geral(){
         if(
             !(

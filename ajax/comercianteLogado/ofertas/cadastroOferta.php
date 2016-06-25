@@ -54,7 +54,7 @@
     </div>
     <div class="col-sm-6 padding0px">
         <label for="id_cat_ofe" class="id_cat_ofe col-sm-6 mb-30">
-            Informe a Data de Inicio da Oferta
+            Informe a Categoria da Oferta
         </label>
         <select name="id_cat_ofe" id="id_cat_ofe"
         class="id_cat_ofe col-sm-6 mb-30">

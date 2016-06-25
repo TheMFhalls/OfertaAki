@@ -39,18 +39,9 @@ class oferta extends config {
         return $busca[0];
     }
 
-    public function gerar(){
-        $comerciante = $this->busca_com();
-        foreach($comerciante as $coluna => $valor){
-            $_SESSION['comerciante'][$coluna] =
-                $valor;
-        }
-    }
-
     public function validaLogin(){
         $comerciante = $this->busca_com();
         if($comerciante['cnpj_com'] != ''){
-            $this->gerar();
             return true;
         }else{
             return false;
