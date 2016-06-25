@@ -117,6 +117,35 @@ function setComerciante(){
 		alert('Erro na setComerciante : '+$e);
 	}
 }
+function setOferta(){
+	try{
+		var raiz = location.origin;
+		$.ajax({
+			type     : "GET",
+			dataType : "json",
+			url      : raiz+"/OfertaAki/ajax/comercianteLogado/ofertas/setOferta.php",
+			data     : {
+				titulo_ofe : $('#titulo_ofe').val(),
+				descricao_ofe : $('#descricao_ofe').val(),
+				precoNormal_ofe : $('#precoNormal_ofe').val(),
+				precoOferta_ofe : $('#precoOferta_ofe').val(),
+				dataInicio_ofe : $('#dataInicio_ofe').val(),
+				dataFinal_ofe : $('#dataFinal_ofe').val(),
+				id_cat_ofe : $('#id_cat_ofe').val()
+			},
+			async    : true,
+			success  : function (resp){
+				if(resp['retorno'] == 'inserido'){
+					openPopUp('Oferta Inserida com sucesso!');
+				}else{
+					openPopUp('Falha ao cadastrar Oferta!');
+				}
+			}
+		});
+	}catch($e){
+		alert('Erro na setComerciante : '+$e);
+	}
+}
 function addTelefoneComerciante(){
 	var texto = "";
 	texto += "	<div class='col-sm-6 telefone_com_"+contagemTelefoneComerciante+"'>";
@@ -360,50 +389,48 @@ function validaLoginComerciante(){
 	}
 }
 function validaOferta() {
-	//if($('#').val()==''){
-	//	alert("!");
-	//	$('#').val("");
-	//	$('#').focus();
-	//	return false;
-	//}else
-	if($('#titulo_ofe').val() == '') {
-		alert("Informe o Titulo da Oferta!");
-		$('#titulo_ofe').val("");
-		$('#titulo_ofe').focus();
-		return false;
-	}else if($('#descricao_ofe').val() == '') {
-		alert("Informe a Descrição da Oferta!");
-		$('#descricao_ofe').val("");
-		$('#descricao_ofe').focus();
-		return false;
-	}else if($('#precoNormal_ofe').val() == '') {
-		alert("Informe o Valor do Produto!");
-		$('#precoNormal_ofe').val("");
-		$('#precoNormal_ofe').focus();
-		return false;
-	}else if($('#dataInicio_ofe').val() == '') {
-		alert("Informe a Data de Inicio da Oferta!");
-		$('#dataInicio_ofe').val("");
-		$('#dataInicio_ofe').focus();
-		return false;dataFinal_ofe
-	}else if($('#dataFinal_ofe').val() == '') {
-		alert("Informe a Data de Final da Oferta!");
-		$('#dataFinal_ofe').val("");
-		$('#dataFinal_ofe').focus();
-		return false;
-	}else if($('#id_cat_ofe').val() == '') {
-		alert("Informe a Categoria da Oferta!");
-		$('#id_cat_ofe').val("");
-		$('#id_cat_ofe').focus();
-		return false;
-	}else if($('#dataFinal_ofe').val() < $('#dataInicio_ofe').val()) {
-		alert("A Data de Inicio deve ser menor que a Data Final da Oferta!");
-		$('#dataFinal_ofe').val("");
-		$('#dataInicio_ofe').val("");
-		$('#dataFinal_ofe').focus();
-		return false;
-	}else{
-
+	try{
+		if($('#titulo_ofe').val() == '') {
+			alert("Informe o Titulo da Oferta!");
+			$('#titulo_ofe').val("");
+			$('#titulo_ofe').focus();
+			return false;
+		}else if($('#descricao_ofe').val() == '') {
+			alert("Informe a Descrição da Oferta!");
+			$('#descricao_ofe').val("");
+			$('#descricao_ofe').focus();
+			return false;
+		}else if($('#precoNormal_ofe').val() == '') {
+			alert("Informe o Valor do Produto!");
+			$('#precoNormal_ofe').val("");
+			$('#precoNormal_ofe').focus();
+			return false;
+		}else if($('#dataInicio_ofe').val() == '') {
+			alert("Informe a Data de Inicio da Oferta!");
+			$('#dataInicio_ofe').val("");
+			$('#dataInicio_ofe').focus();
+			return false;dataFinal_ofe
+		}else if($('#dataFinal_ofe').val() == '') {
+			alert("Informe a Data de Final da Oferta!");
+			$('#dataFinal_ofe').val("");
+			$('#dataFinal_ofe').focus();
+			return false;
+		}else if($('#id_cat_ofe').val() == '') {
+			alert("Informe a Categoria da Oferta!");
+			$('#id_cat_ofe').val("");
+			$('#id_cat_ofe').focus();
+			return false;
+		}else if($('#dataFinal_ofe').val() < $('#dataInicio_ofe').val()) {
+			alert("A Data de Inicio deve ser menor que a Data Final da Oferta!");
+			$('#dataFinal_ofe').val("");
+			$('#dataInicio_ofe').val("");
+			$('#dataFinal_ofe').focus();
+			return false;
+		}else{
+			setOferta();
+		}
+	}catch($e){
+		alert('Erro na validação da Oferta : '+$e);
 	}
 }
 

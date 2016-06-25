@@ -1,6 +1,6 @@
 <?php
     //INCLUDE OF HEAD
-    include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/security/protect.php';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/security/protectComerciante.php';
     include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/head.php';
 ?>
 <html>
@@ -42,4 +42,15 @@
             </div>
         </div>
     </body>
+    <footer>
+        <div class="container">
+            <div class="rodape rodape-main">
+                <div class="row">
+                    <?php
+                    include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/rodape.php';
+                    ?>
+                </div>
+            </div>
+        </div>
+    </footer>
 </html>

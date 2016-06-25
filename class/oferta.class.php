@@ -26,19 +26,6 @@ class oferta extends config {
         $this->setConnection();
     }
 
-    private function busca_com(){
-        $query = "
-			SELECT * FROM
-			comerciante WHERE
-			email_com = '".$this->email_com."' AND
-			senha_com = '".$this->senha_com."'
-		";
-        $busca = $this->connection->getConnection();
-        $busca = $busca->query($query);
-        $busca = $busca->fetchAll();
-        return $busca[0];
-    }
-
     public function validaLogin(){
         $comerciante = $this->busca_com();
         if($comerciante['cnpj_com'] != ''){
