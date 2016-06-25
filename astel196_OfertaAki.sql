@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Tempo de geração: 01/06/2016 às 07:43
--- Versão do servidor: 5.5.38-35.2
+-- Tempo de geração: 25/06/2016 às 17:52
+-- Versão do servidor: 5.5.48-37.8
 -- Versão do PHP: 5.4.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `avalia` (
 CREATE TABLE IF NOT EXISTS `categoria` (
   `id_cat` int(10) NOT NULL,
   `nome_cat` varchar(150) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Fazendo dump de dados para tabela `categoria`
@@ -51,7 +51,9 @@ INSERT INTO `categoria` (`id_cat`, `nome_cat`) VALUES
 (1, 'ROUPAS'),
 (2, 'CALÇADOS'),
 (3, 'ELETRONICOS'),
-(4, 'LIMPEZA');
+(4, 'LIMPEZA'),
+(5, 'ALIMENTOS'),
+(6, 'OUTRAS');
 
 -- --------------------------------------------------------
 
@@ -75,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `cidade_com` (
   `id_cid` int(10) NOT NULL,
   `nome_cid` varchar(255) NOT NULL,
   `id_est_cid` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8192 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5565 DEFAULT CHARSET=latin1;
 
 --
 -- Fazendo dump de dados para tabela `cidade_com`
@@ -5676,7 +5678,7 @@ CREATE TABLE IF NOT EXISTS `comerciante` (
 --
 
 INSERT INTO `comerciante` (`cnpj_com`, `email_com`, `senha_com`, `logo_com`, `nomeFicticio_com`, `id_cid_com`, `horarioInicio_com`, `horarioFinal_com`, `razaoSocial_com`, `responsavel_com`, `cep_com`, `bairro_com`, `endereco_com`) VALUES
-('58.818.281/0001-74', 'maiconjunioheredeslopes130696@gmail.com', 'kjkszpj130696', '', 'Heredes Network', 591, '07:00:00', '18:00:00', 'Heredes Network', 'Maicon Junio Heredes Lopes', '33.913-195', 'Esperança', 'rua japão, 71 esperança Justinopolis');
+('53.898.983/0001-91', 'maiconheredes@hotmail.com', 'kjkszpj130696', '', 'Heredes Importados', 4167, '07:00:00', '18:00:00', 'Heredes Importados', 'maicon junio heredes lopes', '33.913-195', 'Esperança (Justinópolis)', 'Rua Japão 71');
 
 -- --------------------------------------------------------
 
@@ -5688,7 +5690,7 @@ CREATE TABLE IF NOT EXISTS `estado_com` (
   `id_est` int(10) NOT NULL,
   `nome_est` varchar(100) NOT NULL,
   `sigla_est` char(2) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
 --
 -- Fazendo dump de dados para tabela `estado_com`
@@ -5748,11 +5750,18 @@ CREATE TABLE IF NOT EXISTS `oferta` (
   `descricao_ofe` text NOT NULL,
   `precoNormal_ofe` float NOT NULL,
   `precoOferta_ofe` float NOT NULL,
-  `dataInicio_ofe` datetime NOT NULL,
-  `dataFinal_ofe` datetime NOT NULL,
-  `tags_ofe` text NOT NULL,
-  `id_cat_ofe` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `dataInicio_ofe` date NOT NULL,
+  `dataFinal_ofe` date NOT NULL,
+  `id_cat_ofe` int(10) NOT NULL,
+  `cnpj_com_ofe` varchar(18) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+--
+-- Fazendo dump de dados para tabela `oferta`
+--
+
+INSERT INTO `oferta` (`codigo_ofe`, `titulo_ofe`, `descricao_ofe`, `precoNormal_ofe`, `precoOferta_ofe`, `dataInicio_ofe`, `dataFinal_ofe`, `id_cat_ofe`, `cnpj_com_ofe`) VALUES
+(11, 'Lorem Ipsulum Produto 01', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu arcu et velit lacinia viverra. Morbi eget diam massa. Cras sodales rutrum porttitor. Phasellus hendrerit nisi lectus, eget posuere purus convallis quis. Donec imperdiet sem id felis malesuada varius. Phasellus id pharetra velit. Morbi ultrices, velit vitae ornare porttitor, felis erat vehicula tortor, a vulputate quam lorem eget mauris. Vivamus semper mauris nulla, vitae ullamcorper dui dictum nec. Sed bibendum nunc sit amet elit cursus, a consectetur neque bibendum. Donec condimentum accumsan ex et convallis. Nunc lobortis euismod scelerisque. Nam tincidunt odio vel convallis pharetra. Nullam lobortis viverra massa, sed aliquet libero condimentum et. Aliquam ante felis, vestibulum eu tempor eu, volutpat eu arcu.\n\nNulla eu metus ullamcorper, pretium nulla sit amet, scelerisque mauris. Nunc mi tortor, semper varius aliquet sed, fringilla eu lorem. Duis ac erat scelerisque, volutpat felis id, sodales neque. Proin semper accumsan erat, vel venenatis ipsum. Etiam finibus vel libero non tempor. Phasellus tempor tortor sodales faucibus suscipit. Nunc nec euismod turpis. Integer maximus ex ac libero dapibus finibus. Morbi ornare iaculis nisi, et suscipit ipsum tincidunt quis. Interdum et malesuada fames ac ante ipsum primis in faucibus.', 15.99, 13.99, '2016-06-25', '2016-06-30', 5, '53.898.983/0001-91');
 
 -- --------------------------------------------------------
 
@@ -5765,14 +5774,6 @@ CREATE TABLE IF NOT EXISTS `telefone_com` (
   `cnpj_com_tel` varchar(18) NOT NULL,
   `telefone_tel` varchar(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
-
---
--- Fazendo dump de dados para tabela `telefone_com`
---
-
-INSERT INTO `telefone_com` (`id_tel`, `cnpj_com_tel`, `telefone_tel`) VALUES
-(3, '58.818.281/0001-74', '3136387214'),
-(4, '58.818.281/0001-74', '3193443530');
 
 --
 -- Índices de tabelas apagadas
@@ -5824,7 +5825,7 @@ ALTER TABLE `imagem_ofe`
 -- Índices de tabela `oferta`
 --
 ALTER TABLE `oferta`
-  ADD PRIMARY KEY (`codigo_ofe`), ADD KEY `id_cat_ofe` (`id_cat_ofe`);
+  ADD PRIMARY KEY (`codigo_ofe`), ADD KEY `id_cat_ofe` (`id_cat_ofe`), ADD KEY `chave_ofe_com` (`cnpj_com_ofe`) COMMENT 'chave_ofe_com';
 
 --
 -- Índices de tabela `telefone_com`
@@ -5845,7 +5846,7 @@ ALTER TABLE `avalia`
 -- AUTO_INCREMENT de tabela `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id_cat` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id_cat` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de tabela `categoria_comerciante`
 --
@@ -5855,12 +5856,12 @@ ALTER TABLE `categoria_comerciante`
 -- AUTO_INCREMENT de tabela `cidade_com`
 --
 ALTER TABLE `cidade_com`
-  MODIFY `id_cid` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8192;
+  MODIFY `id_cid` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5565;
 --
 -- AUTO_INCREMENT de tabela `estado_com`
 --
 ALTER TABLE `estado_com`
-  MODIFY `id_est` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=32;
+  MODIFY `id_est` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT de tabela `imagem_ofe`
 --
@@ -5870,7 +5871,7 @@ ALTER TABLE `imagem_ofe`
 -- AUTO_INCREMENT de tabela `oferta`
 --
 ALTER TABLE `oferta`
-  MODIFY `codigo_ofe` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `codigo_ofe` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de tabela `telefone_com`
 --
@@ -5890,8 +5891,8 @@ ADD CONSTRAINT `avalia_ibfk_1` FOREIGN KEY (`codigo_ofe_ava`) REFERENCES `oferta
 -- Restrições para tabelas `categoria_comerciante`
 --
 ALTER TABLE `categoria_comerciante`
-ADD CONSTRAINT `categoria_comerciante_ibfk_2` FOREIGN KEY (`id_com_catcom`) REFERENCES `comerciante` (`cnpj_com`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `categoria_comerciante_ibfk_1` FOREIGN KEY (`id_cat_catcom`) REFERENCES `categoria` (`id_cat`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `categoria_comerciante_ibfk_1` FOREIGN KEY (`id_cat_catcom`) REFERENCES `categoria` (`id_cat`) ON DELETE CASCADE ON UPDATE CASCADE,
+ADD CONSTRAINT `categoria_comerciante_ibfk_2` FOREIGN KEY (`id_com_catcom`) REFERENCES `comerciante` (`cnpj_com`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Restrições para tabelas `cidade_com`
@@ -5915,6 +5916,7 @@ ADD CONSTRAINT `imagem_ofe_ibfk_1` FOREIGN KEY (`codigo_ofe_img`) REFERENCES `of
 -- Restrições para tabelas `oferta`
 --
 ALTER TABLE `oferta`
+ADD CONSTRAINT `oferta_ibfk_2` FOREIGN KEY (`cnpj_com_ofe`) REFERENCES `comerciante` (`cnpj_com`) ON DELETE CASCADE ON UPDATE CASCADE,
 ADD CONSTRAINT `oferta_ibfk_1` FOREIGN KEY (`id_cat_ofe`) REFERENCES `categoria` (`id_cat`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --

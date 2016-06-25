@@ -26,7 +26,7 @@ $conexao = $connection->getConnection();
             '".$dataInicio_ofe."',
             '".$dataFinal_ofe."',
             '".$id_cat_ofe."',
-            '".$_SESSION['cnpj_com']."'
+            '".$_SESSION['comerciante']['cnpj_com']."'
         )
     ";
 

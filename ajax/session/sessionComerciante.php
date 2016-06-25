@@ -6,6 +6,4 @@
 
     $comerciante = new loginComerciante($email_com, $senha_com);
 
-
-
 ?>
