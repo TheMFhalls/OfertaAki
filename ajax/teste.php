@@ -9,7 +9,7 @@ $conexao = $connection->getConnection();
 
 
     $query = "
-        SELECT * FROM oferta
+        SELECT * FROM comerciante
     ";
 
 $retorno = array();

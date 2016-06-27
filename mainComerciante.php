@@ -13,7 +13,8 @@
                 <div class="col-sm-12 padding0px menuOpcoesMainComerciante">
                     <ul>
                         <li class="col-sm-12"
-                            onclick="">
+                        onclick="ajaxLoad('.conteudoMainComerciante',
+                            'ajax/comercianteLogado/ofertas/verOferta.php');">
                             Ver Ofertas
                         </li>
                         <li class="col-sm-12"
