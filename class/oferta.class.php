@@ -41,6 +41,10 @@ class oferta extends config {
 
     }
 
+    public function setConnection(){
+        $this->connection = new config();
+    }
+
 }
 
 ?>
