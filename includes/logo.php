@@ -1,3 +1,3 @@
 <div class="tamanhoLogo text-center">
-	<img onclick="indexGeral();" class="logoImagemImg" src="img/logo.png">
+	<img onclick="indexGeral();loadingImg('.content-home > .row');" class="logoImagemImg" src="img/logo.png">
 </div>

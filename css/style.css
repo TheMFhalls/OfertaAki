@@ -128,8 +128,7 @@ textarea{
 }
 .formButton,
 .plusPerfilCadastrar,
-input[type="submit"],
-button{
+input[type="submit"]{
 	background-color: rgba(97, 176, 63, 0.30);
 	border: 1px solid #E47925;
 	padding-left: 10px;
@@ -139,8 +138,7 @@ button{
 	outline: -webkit-focus-ring-color auto 0px;
 }
 .formButton:hover,
-input[type="submit"]:hover,
-button:hover{
+input[type="submit"]:hover{
 	color: white;
 	background-color: #FF7A13 !important;
 }
@@ -347,8 +345,7 @@ li.liListaCidade:hover{
 	border: 1px solid rgba(128,128,128,0.30);
 	box-shadow: 3px 3px 10px rgba(255,165,0,0.50);
 	background-color: #dfffca;
-	height: 470px;
-	cursor: pointer;
+	height: 500px;
 }
 
 .conteudoMainComerciante{

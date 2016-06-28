@@ -23,10 +23,9 @@
             extract($ofertaItem);
     ?>
             <div class="col-sm-4 mb-30">
-                <div class="text-center verOfertaItem"
-                onclick="">
+                <div class="text-center verOfertaItem">
                     <div class="col-sm-12 padding0px mb-10 mt-20 tituloVerOferta">
-                        <?php echo $titulo_ofe; ?>
+                        <?php echo substr($titulo_ofe, 0, 30); ?>
                     </div>
                     <div class="col-sm-12 padding0px imagemVerOferta">
                         <img src="/OfertaAki/img/sem_imagem.jpg" alt="">
@@ -48,6 +47,22 @@
                         </div>
 
                     <?php } ?>
+
+                    <div class="col-sm-4 visualizarVerOferta">
+                        <button class="btn btn-info">
+                            Abrir
+                        </button>
+                    </div>
+                    <div class="col-sm-4 editarVerOferta">
+                        <button class="btn btn-warning">
+                            Editar
+                        </button>
+                    </div>
+                    <div class="col-sm-4 excluirVerOferta">
+                        <button class="btn btn-danger">
+                            Excluir
+                        </button>
+                    </div>
 
                     <div class="cb"></div>
                 </div>
