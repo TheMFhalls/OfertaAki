@@ -29,7 +29,7 @@ class protect{
         }
     }
 
-    private function geral(){
+    public function geral(){
         if(
             !(
                 isset($_SESSION['usuario']['id_cid_usu']) ||

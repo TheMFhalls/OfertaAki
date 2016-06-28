@@ -273,6 +273,9 @@ function verificaComerciante(email_com){
 				}else{
 					retornoVerificaComerciante = false;
 				}
+			},
+			error	: function(){
+				retornoVerificaComerciante = false;
 			}
 		});
 	}catch($e){
@@ -350,6 +353,7 @@ function validaCadastroComerciante(){
 				retornoVerificaComerciante = true;
 				return false;
 			}else{
+				loadingPopup();
 				setComerciante();
 			}
 		}
