@@ -42,6 +42,18 @@ class protect{
         }
     }
 
+    public function comercianteLogado(){
+        if(
+        !(
+            isset($_SESSION['comerciante']['cnpj_com'])
+        )
+        ){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
     public function redireciona($pagina=''){
         if(
             $this->geral()

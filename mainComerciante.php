@@ -4,7 +4,7 @@
     include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/head.php';
 ?>
 <html>
-    <body>
+    <body style="background-color: #ECECEC !important;">
         <div class="col-sm-12 bodyMainComerciante padding0px">
             <div class="col-sm-3 padding0px menusMainComerciante">
                 <div class="col-sm-12 pb-10 pt-10 logoMainComerciante">

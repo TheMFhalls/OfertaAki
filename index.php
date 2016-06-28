@@ -1,3 +1,12 @@
+<?php
+	include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/class/protect.class.php';
+	$protect = new protect();
+	if($protect->comercianteLogado()){
+		header("location: mainComerciante.php");
+	}else if($protect->geral()){
+		header("location: main.php");
+	}
+?>
 <!DOCTYPE html>
 <html>
 <?php

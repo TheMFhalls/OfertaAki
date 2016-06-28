@@ -140,6 +140,9 @@ function setOferta(){
 				}else{
 					openPopUp('Falha ao cadastrar Oferta!');
 				}
+			},
+			error	: function(){
+				openPopUp('Falha ao cadastrar Oferta!');
 			}
 		});
 	}catch($e){
