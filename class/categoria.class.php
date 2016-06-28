@@ -24,6 +24,18 @@ class categoria extends config {
         return $busca;
     }
 
+    public function busca_catSeleta($id_cat){
+        $query = "
+			SELECT * FROM
+			categoria
+			WHERE id_cat='".$id_cat."'
+		";
+        $busca = $this->connection->getConnection();
+        $busca = $busca->query($query);
+        $busca = $busca->fetchAll();
+        return $busca[0];
+    }
+
     public function setConnection(){
         $this->connection = new config();
     }

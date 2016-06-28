@@ -57,7 +57,7 @@
                     </div>
                     <div class="col-sm-4 editarVerOferta">
                         <button class="btn btn-warning" onclick="ajaxLoad('.conteudoMainComerciante',
-                            'ajax/editOferta.php?codigo_ofe=<?php echo $codigo_ofe; ?>');
+                            'ajax/comercianteLogado/ofertas/editOferta.php?codigo_ofe=<?php echo $codigo_ofe; ?>');
                             loadingImg('.conteudoMainComerciante');">
                             Editar
                         </button>
