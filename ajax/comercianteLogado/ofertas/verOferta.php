@@ -48,24 +48,27 @@
 
                     <?php } ?>
 
-                    <div class="col-sm-4 visualizarVerOferta">
-                        <button class="btn btn-info" onclick="ajaxLoad('.conteudoMainComerciante',
-                            'ajax/getOferta.php?codigo_ofe=<?php echo $codigo_ofe; ?>');
-                            loadingImg('.conteudoMainComerciante');">
-                            Abrir
-                        </button>
-                    </div>
-                    <div class="col-sm-4 editarVerOferta">
-                        <button class="btn btn-warning" onclick="ajaxLoad('.conteudoMainComerciante',
-                            'ajax/comercianteLogado/ofertas/editOferta.php?codigo_ofe=<?php echo $codigo_ofe; ?>');
-                            loadingImg('.conteudoMainComerciante');">
-                            Editar
-                        </button>
-                    </div>
-                    <div class="col-sm-4 excluirVerOferta">
-                        <button class="btn btn-danger">
-                            Excluir
-                        </button>
+                    <div class="col-sm-12 padding0px botoesnessabobagem">
+                        <div class="col-sm-4 visualizarVerOferta">
+                            <button class="btn btn-info" onclick="ajaxLoad('.conteudoMainComerciante',
+                                'ajax/getOferta.php?codigo_ofe=<?php echo $codigo_ofe; ?>');
+                                loadingImg('.conteudoMainComerciante');">
+                                Abrir
+                            </button>
+                        </div>
+                        <div class="col-sm-4 editarVerOferta">
+                            <button class="btn btn-warning" onclick="ajaxLoad('.conteudoMainComerciante',
+                                'ajax/comercianteLogado/ofertas/editOferta.php?codigo_ofe=<?php echo $codigo_ofe; ?>');
+                                loadingImg('.conteudoMainComerciante');">
+                                Editar
+                            </button>
+                        </div>
+                        <div class="col-sm-4 excluirVerOferta">
+                            <button class="btn btn-danger"
+                                    onclick="setDelOferta('<?php echo $codigo_ofe; ?>');">
+                                Excluir
+                            </button>
+                        </div>
                     </div>
 
                     <div class="cb"></div>

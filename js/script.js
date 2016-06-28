@@ -149,6 +149,37 @@ function setOferta(){
 		alert('Erro na setComerciante : '+$e);
 	}
 }
+function setDelOferta(codigo_ofe){
+	try{
+		var r = confirm("Deseja mesmo deletar Oferta ?");
+		if(r){
+			var raiz = location.origin;
+			$.ajax({
+				type     : "GET",
+				dataType : "json",
+				url      : raiz+"/OfertaAki/ajax/comercianteLogado/ofertas/setDelOferta.php",
+				data     : {
+					codigo_ofe : codigo_ofe
+				},
+				async    : true,
+				success  : function (resp){
+					if(resp['retorno'] == 'inserido'){
+						openPopUp('Oferta Deletada com sucesso!');
+						loadingImg('.conteudoMainComerciante');
+						ajaxLoad('.conteudoMainComerciante', 'ajax/comercianteLogado/ofertas/verOferta.php');
+					}else{
+						openPopUp('Falha ao Deletar Oferta!');
+					}
+				},
+				error	: function(){
+					openPopUp('Falha ao Deletar Oferta!');
+				}
+			});
+		}
+	}catch($e){
+		alert('Erro na setEditComerciante : '+$e);
+	}
+}
 function setEditOferta(){
 	try{
 		var raiz = location.origin;
