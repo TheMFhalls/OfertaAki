@@ -24,20 +24,22 @@ class oferta extends config {
         $this->setConnection();
     }
 
-    public function buscaOfertaComerciante($cnpj_com){
+    public function buscaOfertaComerciante($cnpj_com)
+    {
         $query = "
             SELECT * FROM
-            ofertas
-            WHERE cnpj_com_ofe = '".$cnpj_com."'
+            oferta
+            WHERE cnpj_com_ofe = '" . $cnpj_com . "'
         ";
 
         $busca = $this->connection->getConnection();
         $buscaValida = $busca->query($query);
         $busca = $buscaValida->fetchAll();
-        if($buscaValida->rowCount()!=0)
+        if ($buscaValida->rowCount() != 0) {
             return $busca;
-        else
+        }else{
             return false;
+        }
 
     }
 

@@ -14,19 +14,15 @@
                     <ul>
                         <li class="col-sm-12"
                         onclick="ajaxLoad('.conteudoMainComerciante',
-                            'ajax/comercianteLogado/ofertas/verOferta.php');">
+                            'ajax/comercianteLogado/ofertas/verOferta.php');
+                            loadingImg('.conteudoMainComerciante');">
                             Ver Ofertas
                         </li>
                         <li class="col-sm-12"
                         onclick="ajaxLoad('.conteudoMainComerciante',
-                            'ajax/comercianteLogado/ofertas/cadastroOferta.php');">
+                            'ajax/comercianteLogado/ofertas/cadastroOferta.php');
+                            loadingImg('.conteudoMainComerciante');">
                             Inserir Ofertas
-                        </li>
-                        <li class="col-sm-12">
-                            Alterar Ofertas
-                        </li>
-                        <li class="col-sm-12">
-                            Deletar Ofertas
                         </li>
                         <li class="col-sm-12">
                             Editar Conta
@@ -38,8 +34,10 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-9 conteudoMainComerciante">
-
+            <div class="col-sm-9 conteudoMainComerciante pt-30">
+                <div class="col-sm-12 padding0px text-center">
+                    <img src="/OfertaAki/img/carregando.gif" width="100px" alt="">
+                </div>
             </div>
         </div>
     </body>

@@ -9,15 +9,13 @@ $conexao = $connection->getConnection();
 
 
     $query = "
-        SELECT * FROM comerciante
+        SELECT * FROM oferta
     ";
 
 $retorno = array();
 $retorno = $conexao->query($query);
 
-//header("Content-type: application/json");
-//echo json_encode($retorno->fetchAll());
-
-print_r($retorno->fetchAll());
+header("Content-type: application/json");
+echo json_encode($retorno->fetchAll());
 
 ?>

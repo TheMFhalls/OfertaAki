@@ -334,6 +334,41 @@ li.liListaCidade:hover{
 	cursor: pointer;
 }
 
+.imagemVerOferta img {
+	max-width: 100%;
+}
+
+.tituloVerOferta {
+	text-transform: uppercase;
+	font-weight: bolder;
+}
+
+.verOfertaItem {
+	border: 1px solid rgba(128,128,128,0.30);
+	box-shadow: 3px 3px 10px rgba(255,165,0,0.50);
+	background-color: #dfffca;
+	height: 470px;
+	cursor: pointer;
+}
+
+.conteudoMainComerciante{
+	-webkit-transition: 0.5s ease-out;
+	-moz-transition: 0.5s ease-out;
+	-o-transition: 0.5s ease-out;
+	transition: 0.5s ease-out;
+}
+
+.precoVerOferta span {
+	text-decoration: line-through;
+	font-size: 20px;
+	color: rgba(255,0,0,0.5);
+}
+
+.precoOfertaVerOferta span {
+	font-size: 30px;
+	color: green;
+}
+
 @media (max-width: 320px){
 
 }

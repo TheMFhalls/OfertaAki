@@ -433,8 +433,11 @@ function validaOferta() {
 		alert('Erro na validação da Oferta : '+$e);
 	}
 }
-
+function loadingImg(caminho){
+	$(caminho).html("<div class='col-sm-12 padding0px text-center'><img src='/OfertaAki/img/carregando.gif' width='100px'></div>");
+}
 
 $(document).ready(function(){
 	indexGeral();
+	ajaxLoad('.conteudoMainComerciante', 'ajax/comercianteLogado/ofertas/verOferta.php');
 });
