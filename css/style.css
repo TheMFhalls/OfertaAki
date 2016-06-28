@@ -367,6 +367,14 @@ li.liListaCidade:hover{
 	color: green;
 }
 
+@media (max-width: 768px){
+	.verOfertaItem {
+		height: auto;
+	}
+	.verOfertaItem button {
+		margin-bottom: 20px;
+	}
+}
 @media (max-width: 320px){
 
 }
