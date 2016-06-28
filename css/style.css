@@ -353,6 +353,11 @@ li.liListaCidade:hover{
 	-moz-transition: 0.5s ease-out;
 	-o-transition: 0.5s ease-out;
 	transition: 0.5s ease-out;
+	height: auto;
+}
+
+.menusMainComerciante{
+	height: auto;
 }
 
 .precoVerOferta span {
