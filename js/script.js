@@ -363,6 +363,7 @@ function openPopUp(valor){
 }
 function validaLoginComerciante(){
 	try{
+		loadingPopup();
 		var raiz = location.origin;
 		$.ajax({
 			type     : "GET",
@@ -379,9 +380,10 @@ function validaLoginComerciante(){
 					setTimeout(function(){
 						window.location=raiz+"/OfertaAki/mainComerciante.php";
 					},3000);
-				}else{
-					openPopUp('Erro ao logar usuario!');
 				}
+			},
+			error	: function(){
+				openPopUp('Dados incorretos!');
 			}
 		});
 	}catch($e){
@@ -435,6 +437,10 @@ function validaOferta() {
 }
 function loadingImg(caminho){
 	$(caminho).html("<div class='col-sm-12 padding0px text-center'><img src='/OfertaAki/img/carregando.gif' width='100px'></div>");
+}
+function loadingPopup(){
+	$('.popupGeral').attr('style', 'display: block;');
+	loadingImg('.conteudoPopup');
 }
 
 $(document).ready(function(){
