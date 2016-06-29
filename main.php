@@ -7,7 +7,7 @@
 ?>
 <body>
 	<div class="container bodyGeral bodyGeral-main">
-		<div class="topGeral topGeral-main">
+		<div class="topGeral topGeral-main mt-30">
 			<div class="row">
 				<?php 
 					include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/topGeral.php';
@@ -23,9 +23,6 @@
 		</div>		
 		<div class="content content-main">
 			<div class="row">
-				<?php
-					include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/content.php';
-				?>
 			</div>
 		</div>
 	</div>

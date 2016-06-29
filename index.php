@@ -15,7 +15,7 @@
 ?>
 <body>
 	<div class="container bodyGeral bodyGeral-home">
-		<div class="topGeral topGeral-home">
+		<div class="topGeral topGeral-home mt-30">
 			<div class="row">
 				<?php
 					include_once $_SERVER['DOCUMENT_ROOT'].'/OfertaAki/includes/topGeral.php';

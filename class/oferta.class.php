@@ -62,6 +62,32 @@ class oferta extends config {
         }
     }
 
+    public function buscaOfertaSeleta($selecao, $id_cid){
+        $query = "
+            SELECT
+              titulo_ofe,
+              precoNormal_ofe,
+              precoOferta_ofe,
+              codigo_ofe
+            FROM
+            oferta INNER JOIN comerciante
+            ON cnpj_com_ofe = cnpj_com
+            INNER JOIN cidade_com
+            ON id_cid = id_cid_com
+			WHERE titulo_ofe LIKE '%".$selecao."%'
+			AND id_cid = '".$id_cid."'
+        ";
+
+        $busca = $this->connection->getConnection();
+        $buscaValida = $busca->query($query);
+        $busca = $buscaValida->fetchAll();
+        if ($buscaValida->rowCount() != 0) {
+            return $busca;
+        }else{
+            return false;
+        }
+    }
+
     public function buscaOfertasCidade($id_cid)
     {
         $query = "

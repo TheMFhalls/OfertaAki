@@ -667,9 +667,14 @@ function loadingPopup(){
 	$('.popupGeral').attr('style', 'display: block;');
 	loadingImg('.conteudoPopup');
 }
+function buscaGeral(selecao){
+	loadingImg('.content-main');
+	ajaxLoad('.content-main', "ajax/verOferta3.php?selecao="+selecao);
+}
 
 $(document).ready(function(){
 	indexGeral();
+	loadingImg('.content-main');
 	ajaxLoad('.conteudoMainComerciante', 'ajax/comercianteLogado/ofertas/verOferta.php');
 	ajaxLoad('.content-main', 'ajax/verOferta2.php');
 });
