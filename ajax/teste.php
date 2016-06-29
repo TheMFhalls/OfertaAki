@@ -11,8 +11,10 @@ $conexao = $connection->getConnection();
     $query = "
         SELECT * FROM
             oferta INNER JOIN comerciante
-            ON cnpj_com = cnpj_com_ofe
-            WHERE codigo_ofe = '" . $codigo_ofe . "'
+            ON cnpj_com_ofe = cnpj_com
+            INNER JOIN cidade_com
+            ON id_cid = id_cid_com
+			WHERE id_cid = 4167
     ";
 
 $retorno = array();

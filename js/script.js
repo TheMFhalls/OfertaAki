@@ -671,4 +671,5 @@ function loadingPopup(){
 $(document).ready(function(){
 	indexGeral();
 	ajaxLoad('.conteudoMainComerciante', 'ajax/comercianteLogado/ofertas/verOferta.php');
+	ajaxLoad('.content-main', 'ajax/verOferta2.php');
 });
