@@ -334,6 +334,41 @@ li.liListaCidade:hover{
 
 .imagemVerOferta img {
 	max-width: 100%;
+	margin: auto;
+	left: 50%;
+	transform: translateX(-50%);
+	position: relative;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.mostrarOferta .precoNormal_ofe {
+	font-size: 30px;
+	color: red;
+	text-decoration: line-through;
+}
+
+.mostrarOferta .precoOferta_ofe {
+	font-size: 30px;
+	color: green;
+}
+
+.mostrarOferta .dataInicio_ofe {
+	font-size: 30px;
+	color: orange;
+}
+
+.mostrarOferta .dataFinal_ofe {
+	font-size: 30px;
+	color: blue;
+}
+
+.tituloDIV {
+	font-size: 30px;
+	font-weight: bold;
+	border-bottom: 1px solid rgba(128,128,128,0.5);
 }
 
 .tituloVerOferta {

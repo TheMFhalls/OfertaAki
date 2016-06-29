@@ -79,8 +79,7 @@
             ?>
             <option value="">-- Selecione uma Categoria --</option>
         </select>
-        <input type="hidden" value="<?php echo $codigo_ofe; ?>" id="codigo_ofe"
-        class="codigo_ofe"/>
+
     </div>
     <div class="col-sm-12 padding0px">
         <input type="submit" class="col-sm-12 mb-30" value="SALVAR ALTERAÇÕES"

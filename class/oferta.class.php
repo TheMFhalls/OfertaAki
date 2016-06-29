@@ -62,6 +62,26 @@ class oferta extends config {
 
     }
 
+    public function buscaOfertaComEndereco($codigo_ofe)
+    {
+        $query = "
+            SELECT * FROM
+            oferta INNER JOIN comerciante
+            ON cnpj_com = cnpj_com_ofe
+            WHERE codigo_ofe = '" . $codigo_ofe . "'
+        ";
+
+        $busca = $this->connection->getConnection();
+        $buscaValida = $busca->query($query);
+        $busca = $buscaValida->fetchAll();
+        if ($buscaValida->rowCount() != 0) {
+            return $busca;
+        }else{
+            return false;
+        }
+
+    }
+
     public function setConnection(){
         $this->connection = new config();
     }
