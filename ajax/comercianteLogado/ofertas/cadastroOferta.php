@@ -48,7 +48,7 @@
     </div>
     <div class="col-sm-6 padding0px">
         <label for="dataFinal_ofe" class="dataFinal_ofe col-sm-6 mb-30">
-            Informe a Data de Inicio da Oferta
+            Informe a Data de Final da Oferta
         </label>
         <input type="date" class="dataFinal_ofe col-sm-6 mb-30" id="dataFinal_ofe" />
     </div>

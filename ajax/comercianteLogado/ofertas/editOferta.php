@@ -24,6 +24,7 @@
         <label for="titulo_ofe" class="titulo_ofe col-sm-4 mb-30">
             Informe o Titulo da Oferta
         </label>
+        <input type="hidden" id="codigo_ofe" class="codigo_ofe" value="<?php echo $codigo_ofe; ?>" />
         <input type="text" class="titulo_ofe col-sm-8 mb-30" id="titulo_ofe"
                maxlength="150" value="<?php echo $titulo_ofe; ?>" />
     </div>
