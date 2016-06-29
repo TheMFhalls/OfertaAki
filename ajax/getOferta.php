@@ -20,7 +20,6 @@
     <?php
         foreach($oferta as $ofertaItem):
         extract($ofertaItem);
-        print_r($ofertaItem);
     ?>
         <div class="col-sm-12 padding0px mostrarOferta">
             <div class="col-sm-12 text-center tituloDIV mb-30">
@@ -110,10 +109,32 @@
                 <?php echo $cnpj_com; ?>
             </div>
             <div class="col-sm-3 text-right tituloOfertante mb-30 bold">
-                CNPJ da Empresa
+                E-mail do Comerciante
             </div>
             <div class="col-sm-3 text-left mb-30">
-                <?php echo $cnpj_com; ?>
+                <?php echo $email_com; ?>
+            </div>
+            <div class="col-sm-3 text-right tituloOfertante mb-30 bold">
+                CEP do Comerciante
+            </div>
+            <div class="col-sm-3 text-left mb-30">
+                <?php echo $cep_com; ?>
+            </div>
+            <div class="col-sm-3 text-right tituloOfertante mb-30 bold">
+                Bairro do Comerciante
+            </div>
+            <div class="col-sm-3 text-left mb-30">
+                <?php echo $bairro_com; ?>
+            </div>
+            <div class="col-sm-3 text-right tituloOfertante mb-30 bold">
+                Endereço do Comerciante
+            </div>
+            <div class="col-sm-3 text-left mb-30">
+                <?php echo $endereco_com; ?>
+            </div>
+            <div class="col-sm-12 text-center tituloOfertante mb-30 bold"
+            style="font-size: 30px;">
+                Aberto das <?php echo $horarioInicio_com; ?> Às <?php echo $horarioFinal_com; ?>
             </div>
         </div>
     <?php

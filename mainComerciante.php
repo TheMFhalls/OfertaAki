@@ -13,18 +13,21 @@
                 <div class="col-sm-12 padding0px menuOpcoesMainComerciante">
                     <ul>
                         <li class="col-sm-12"
-                        onclick="ajaxLoad('.conteudoMainComerciante',
+                            onclick="ajaxLoad('.conteudoMainComerciante',
                             'ajax/comercianteLogado/ofertas/verOferta.php');
                             loadingImg('.conteudoMainComerciante');">
                             Ver Ofertas
                         </li>
                         <li class="col-sm-12"
-                        onclick="ajaxLoad('.conteudoMainComerciante',
+                            onclick="ajaxLoad('.conteudoMainComerciante',
                             'ajax/comercianteLogado/ofertas/cadastroOferta.php');
                             loadingImg('.conteudoMainComerciante');">
                             Inserir Ofertas
                         </li>
-                        <li class="col-sm-12">
+                        <li class="col-sm-12"
+                            onclick="ajaxLoad('.conteudoMainComerciante',
+                            'ajax/comercianteLogado/editComerciante.php');
+                            loadingImg('.conteudoMainComerciante');">
                             Editar Conta
                         </li>
                         <li class="col-sm-12"

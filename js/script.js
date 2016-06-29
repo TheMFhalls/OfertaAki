@@ -117,6 +117,41 @@ function setComerciante(){
 		alert('Erro na setComerciante : '+$e);
 	}
 }
+function setEditComerciante(){
+	try{
+		var raiz = location.origin;
+		$.ajax({
+			type     : "GET",
+			dataType : "json",
+			url      : raiz+"/OfertaAki/ajax/comercianteLogado/setEditComerciante.php",
+			data     : {
+				cnpj_com : $('#cnpj_com').val(),
+				email_com : $('#email_com').val(),
+				senha_com : $('#senha_com').val(),
+				logo_com : $('#logo_com').val(),
+				nomeFicticio_com : $('#nomeFicticio_com').val(),
+				id_cid_com : $('#id_cid_com').val(),
+				horarioInicio_com : $('#horarioInicio_com').val(),
+				horarioFinal_com : $('#horarioFinal_com').val(),
+				razaoSocial_com : $('#razaoSocial_com').val(),
+				responsavel_com : $('#responsavel_com').val(),
+				cep_com : $('#cep_com').val(),
+				bairro_com : $('#bairro_com').val(),
+				endereco_com : $('#endereco_com').val()
+			},
+			async    : true,
+			success  : function (resp){
+				if(resp['retorno'] == 'inserido'){
+					openPopUp('Usuario Alterado com sucesso!');
+				}else{
+					openPopUp('Falha ao Editar Comerciante!');
+				}
+			}
+		});
+	}catch($e){
+		alert('Erro na setEditComerciante : '+$e);
+	}
+}
 function setOferta(){
 	try{
 		var raiz = location.origin;
@@ -349,6 +384,78 @@ function verificaComerciante(email_com){
 		});
 	}catch($e){
 		alert('Erro na verificaComerciante : '+$e);
+	}
+}
+function validaEditCadastroComerciante(){
+	try{
+		if($('#cnpj_com').val()==''){
+			alert("Informe seu CNPJ!");
+			$('#cnpj_com').val("");
+			$('#cnpj_com').focus();
+			return false;
+		}else if(validarCNPJ($('#cnpj_com').val())){
+			alert("CNPJ Invalido!");
+			$('#cnpj_com').val("");
+			$('#cnpj_com').focus();
+		}else if($('#email_com').val()==''){
+			alert("Informe seu EMAIL!");
+			$('#email_com').val("");
+			$('#email_com').focus();
+			return false;
+		}else if(validaEmail($('#email_com').val())){
+			alert("EMAIL Invalido!");
+			$('#email_com').val("");
+			$('#email_com').focus();
+			return false;
+		}else if($('#senha_com').val()==''){
+			alert("Informe sua SENHA!");
+			$('#senha_com').val("");
+			$('#senha_com').focus();
+			return false;
+		}else if($('#senha_com2').val()!=
+			$('#senha_com').val()){
+			alert("Senhas informadas são invalidas!");
+			$('#senha_com2').val("");
+			$('#senha_com2').focus();
+			return false;
+		}else if($('#cep_com').val()==''){
+			alert("Informe seu CEP!");
+			$('#cep_com').val("");
+			$('#cep_com').focus();
+			return false;
+		}else if($('#id_cid_com').val()==''){
+			alert("Informe sua CIDADE!");
+			$('#id_cid_com2').val("");
+			$('#id_cid_com2').focus();
+			return false;
+		}else if($('#razaoSocial_com').val()==''){
+			alert("Informe sua RAZÃO SOCIAL!");
+			$('#razaoSocial_com').val("");
+			$('#razaoSocial_com').focus();
+			return false;
+		}else if($('#responsavel_com').val()==''){
+			alert("Informe o RESPONSAVEL pela Empresa!");
+			$('#responsavel_com').val("");
+			$('#responsavel_com').focus();
+			return false;
+		}else if($('#bairro_com').val()==''){
+			alert("Informe seu BAIRRO!");
+			$('#bairro_com').val("");
+			$('#bairro_com').focus();
+			return false;
+		}else if($('#endereco_com').val()==''){
+			alert("Informe seu ENDEREÇO!");
+			$('#endereco_com').val("");
+			$('#endereco_com').focus();
+			return false;
+		}else{
+			loadingPopup();
+			setEditComerciante();
+			loadingImg('.conteudoMainComerciante');
+			ajaxLoad('.conteudoMainComerciante', 'ajax/comercianteLogado/ofertas/verOferta.php');
+		}
+	}catch($e){
+		alert('Erro na validação do cadastro!');
 	}
 }
 function validaCadastroComerciante(){
